@@ -152,16 +152,18 @@ section.meta {
 }
 
 .students {
+  padding: 0;
   column-count: 1;
-  h1 {
-    text-align: center;
+  .profiles {
+    h1 {
+      text-align: center;
+    }
+    img {
+      padding: 0;
+    }
+    padding: 0;
   }
+ 
 
-  .profile {
-    margin: 1em;
-    border: 0.5em solid $colorGrayLight;
-    background-color: $colorGrayDark;
-    height: 400px;
-  }
 }
 

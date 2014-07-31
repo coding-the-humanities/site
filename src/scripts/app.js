@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  var app = angular.module('cth', ['ngSanitize', 'templates-cth', 'ngAnimate', 'firebase', 'ui.router']);
+  var app = angular.module('cth', ['ngSanitize', 'templates-cth', 'ngAnimate', 'firebase', 'ui.router', 'ui.bootstrap.carousel']);
 
   app.constant('Showdown', Showdown);
   app.constant('$', jQuery);

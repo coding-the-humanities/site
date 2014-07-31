@@ -3,9 +3,17 @@ module.exports =
     src: "angular/angular.js"
     dest: "src/vendor/angular.js"
 
-  bootstrap:
-    src: "bootstrap-sass-official/assets/stylesheets"
-    dest: "src/styles/bootstrap"
+  bootstrapCSS:
+    src: "bootstrap-sass-official/assets/stylesheets/"
+    dest: "src/styles/bootstrap/"
+
+  bootstrapJS:
+    src: "bootstrap-sass-official/assets/javascripts/bootstrap.js"
+    dest: "src/vendor/bootstrap.js"
+
+  uiBootstrapJS:
+    src: ["angular-ui-bootstrap/src/carousel/carousel.js", "angular-ui-bootstrap/src/transition/transition.js"]
+    dest: "src/vendor/"
 
   angularUiRouter:
     src: "angular-ui-router/release/angular-ui-router.js"

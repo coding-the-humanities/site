@@ -6,9 +6,9 @@
     var vm = this;
     vm.showHeader = true;
 
-    $timeout(function(){
-      vm.showHeader = false;
-    }, 2000);
+    // $timeout(function(){
+    //   vm.showHeader = false;
+    // }, 2000);
     
     
     vm.postOrder = '-posted';

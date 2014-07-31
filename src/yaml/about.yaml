@@ -4,6 +4,7 @@ authors:
 - Sabrina Sauer
 images:
 - url: ./images/coding.jpg
+layout: alt
 tags:
 - about
 content: |

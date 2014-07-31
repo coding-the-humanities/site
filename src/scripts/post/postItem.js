@@ -1,8 +1,8 @@
 (function(){
   'use strict';
-  angular.module('cth').directive('postItem', ['scroll', postItem]);
+  angular.module('cth').directive('postItem', ['$timeout', 'scroll', postItem]);
       
-  function postItem(scroll) {
+  function postItem($timeout, scroll) {
     return {
       restrict: 'E',
       scope: {
@@ -14,7 +14,9 @@
       link: function(scope, element, attrs){
         attrs.$observe('selected', function(newValue, oldValue){
           if(newValue === "true"){
-            scroll.toTop(element);
+            $timeout(function(){
+              scroll.toTop(element);
+            }, 500);
           }
         });
       }

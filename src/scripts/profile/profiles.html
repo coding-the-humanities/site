@@ -1,0 +1,13 @@
+<section class="profiles col-xs-12"> 
+
+  <div ng-repeat="gallery in galleries" class="slideshow">
+    <carousel disable-ng-animate ng-class="'visible-' + gallery.pageSize + '-block'">
+      <slide ng-repeat="slide in gallery.profiles" active="slide.active">
+        <div ng-repeat="profile in slide">
+          <img ng-src="{{profile.image.url}}" ng-class="'col-xs-' + gallery.colSize">
+        </div>
+      </slide>
+    </carousel>
+  </div>
+
+</section>

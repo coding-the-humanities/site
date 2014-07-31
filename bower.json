@@ -24,7 +24,8 @@
     "jQuery.scrollIntoView": "https://github.com/Arwid/jQuery.scrollIntoView.git",
     "viewport-units-buggyfill": "~0.3.1",
     "bootstrap-sass-official": "~3.2.0",
-    "angular-animate": "~1.2.21"
+    "angular-animate": "~1.2.21",
+    "angular-ui-bootstrap": "~0.10.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.20"

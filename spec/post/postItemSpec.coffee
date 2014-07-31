@@ -47,7 +47,7 @@ xdescribe 'postItem directive', ->
 
   describe 'selected item', ->
     beforeEach ->
-      @$scope.post.selected = true;
+      @$scope.post.selected = true
       @$scope.$apply()
 
     it 'has a class of selected', ->
