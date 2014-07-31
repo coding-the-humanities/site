@@ -20,16 +20,24 @@
 
   function ProfilesCtrl($scope){
 
-    var slideSizes = [3, 4, 6, 12];
-    var classNames = ['xs', 'sm', 'md', 'lg'];
+    $scope.galleries = generateGalleries($scope.people);
 
-    $scope.galleries = _.map(slideSizes, function(slideSize, index){
+    function generateGalleries(items){
+      var slideSizes = [3, 4, 6, 12];
+      var pageSizes = ['xs', 'sm', 'md', 'lg'];
+      return _.map(slideSizes, function(slideSize, index){
+        var pageSize = pageSizes[index];
+        return new Slide(items, slideSize, pageSize);
+      });
+    }
+
+    function Slide(items, slideSize, pageSize){
       return {
-        pageSize: classNames[index],
+        pageSize: pageSize,
         colSize: 12 / slideSize,
-        profiles: chunker($scope.people, slideSize)
+        profiles: chunker(items, slideSize)
       };
-    });
+    }
 
     function chunker(array, size){
       var clone = array.slice(0);
@@ -38,6 +46,6 @@
         results.push(clone.splice(0, size));
       }
       return results;
-    };
+    }
   }
 })();
