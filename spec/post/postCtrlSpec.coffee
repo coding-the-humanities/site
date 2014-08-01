@@ -1,4 +1,4 @@
-describe 'PostCtrl', ->
+describe 'BlockCtrl', ->
 
   beforeEach(module('cth'))
 
@@ -23,22 +23,21 @@ describe 'PostCtrl', ->
       @$state = $injector.get '$state'
       @$rootScope = $injector.get '$rootScope'
 
-
   describe 'posts property', ->
     describe 'object retrieval', ->
       beforeEach ->
         @$scope = @$rootScope.$new @$rootScope
 
-        @PostCtrl = @controllerConstructor 'PostCtrl',
+        @BlockCtrl = @controllerConstructor 'BlockCtrl',
           $scope: @$scope
-          posts: posts
-        @posts = @PostCtrl.posts
+          content: posts
+        @blocks = @BlockCtrl.blocks
 
       it 'is only defined after it calls the post service', ->
-        expect(@posts).toBeDefined()
+        expect(@blocks).toBeDefined()
 
       it 'is an Array', ->
-        expect(@posts.length).toBe(2)
+        expect(@blocks.length).toBe(2)
 
   describe 'selecting and expanding posts', ->
     describe 'without url', ->
@@ -46,51 +45,51 @@ describe 'PostCtrl', ->
         @$state.params.post_id = ""
         @$scope = @$rootScope.$new @$rootScope
 
-        @PostCtrl = @controllerConstructor 'PostCtrl',
+        @BlockCtrl = @controllerConstructor 'BlockCtrl',
           $scope: @$scope
-          posts: posts
-        @selectedPosts = _.filter(@PostCtrl.posts, 'initial')
+          content: posts
+        @selectedBlocks = _.filter(@BlockCtrl.blocks, 'initial')
 
       it 'has the first posts marked as initial after retrieval', ->
-        expect(@selectedPosts.length).toBe(1)
+        expect(@selectedBlocks.length).toBe(1)
 
       it 'has the right title', ->
-        expect(@selectedPosts[0].title).toBe('Hello World')
+        expect(@selectedBlocks[0].title).toBe('Hello World')
 
       it 'is not expanded', ->
-        expect(@selectedPosts[0].expanded).toBe(undefined)
+        expect(@selectedBlocks[0].expanded).toBe(undefined)
 
     describe 'with url', ->
       beforeEach ->
         @$state.params.post_id = "goodbye-day"
         @$scope = @$rootScope.$new @$rootScope
 
-        @PostCtrl = @controllerConstructor 'PostCtrl',
+        @BlockCtrl = @controllerConstructor 'BlockCtrl',
           $scope: @$scope
-          posts: posts
-        @selectedPosts = _.filter(@PostCtrl.posts, 'selected')
+          content: posts
+        @selectedBlocks = _.filter(@BlockCtrl.blocks, 'selected')
         
       it 'has one selected posts if page corresponds', ->
-        expect(@selectedPosts.length).toBe(1)
+        expect(@selectedBlocks.length).toBe(1)
 
       it 'has the right title', ->
-        expect(@selectedPosts[0].title).toBe('Goodbye Day')
+        expect(@selectedBlocks[0].title).toBe('Goodbye Day')
 
       it 'is expanded', ->
-        expect(@selectedPosts[0].expanded).toBe(true)
+        expect(@selectedBlocks[0].expanded).toBe(true)
 
       describe 'when selection changes', ->
         beforeEach ->
           @$rootScope.$broadcast '$stateChangeSuccess', {},
             post_id: "hello-world"
-          @selectedPosts = _.filter(@PostCtrl.posts, 'selected')
-          @expandedPosts = _.filter(@PostCtrl.posts, 'expanded')
+          @selectedBlocks = _.filter(@BlockCtrl.blocks, 'selected')
+          @expandedBlocks = _.filter(@BlockCtrl.blocks, 'expanded')
 
         it 'still has one selected post', ->
-          expect(@selectedPosts.length).toBe(1)
+          expect(@selectedBlocks.length).toBe(1)
 
         it 'has the correct new title', ->
-          expect(@selectedPosts[0].title).toBe(posts[0].title)
+          expect(@selectedBlocks[0].title).toBe(posts[0].title)
 
         it 'leaves the other post expanded', ->
-          expect(@expandedPosts.length).toBe(2)
+          expect(@expandedBlocks.length).toBe(2)

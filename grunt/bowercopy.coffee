@@ -23,6 +23,10 @@ module.exports =
     src: "angular-sanitize/angular-sanitize.js"
     dest: "src/vendor/angular-sanitize.js"
 
+  angularResource:
+    src: "angular-resource/angular-resource.js"
+    dest: "src/vendor/angular-resource.js"
+
   angularAnimate:
     src: "angular-animate/angular-animate.js"
     dest: "src/vendor/angular-animate.js"

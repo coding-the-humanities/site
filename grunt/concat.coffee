@@ -1,9 +1,17 @@
 module.exports =
-  json:
-    src: ['src/yaml/tmp/**/*.json']
-    dest: 'src/api/posts.json'
+  posts:
+    src: ['src/yaml/tmp/posts/**/*.json']
+    dest: 'dev/api/posts.json'
     options:
       banner: '{"posts": ['
+      footer: "]}"
+      separator: ','
+
+  pilot:
+    src: ['src/yaml/tmp/pilot/**/*.json']
+    dest: 'dev/api/pilot.json'
+    options:
+      banner: '{"pilot": ['
       footer: "]}"
       separator: ','
 
@@ -25,6 +33,7 @@ module.exports =
       'src/vendor/transition.js'
       'src/vendor/angular-ui-router.js'
       'src/vendor/angular-sanitize.js'
+      'src/vendor/angular-resource.js'
       'src/vendor/angular-animate.js'
       'src/vendor/angularfire.js'
     ]
@@ -41,7 +50,7 @@ module.exports =
       'src/scripts/routes.js'
       'src/scripts/appCtrl.js'
       'src/scripts/post/PostService.js'
-      'src/scripts/post/postCtrl.js'
+      'src/scripts/post/BlockCtrl.js'
       'src/scripts/post/postItemCtrl.js'
       'src/scripts/post/postItem.js'
       'src/scripts/profile/profilesCtrl.js'

@@ -23,13 +23,6 @@ module.exports =
     src: "**/*.js"
     dest: "dev/"
 
-  json:
-    expand: true
-    flatten: true
-    cwd: "src"
-    src: "api/**/*.json"
-    dest: "dev/api"
-
   fonts:
     expand: true
     flatten: true
@@ -41,4 +34,3 @@ module.exports =
     cwd: "dev"
     src: ["index.html", "images/**/*", "fonts/**/*", "api/**/*"]
     dest: "dist"
-

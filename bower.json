@@ -25,7 +25,8 @@
     "viewport-units-buggyfill": "~0.3.1",
     "bootstrap-sass-official": "~3.2.0",
     "angular-animate": "~1.2.21",
-    "angular-ui-bootstrap": "~0.10.0"
+    "angular-ui-bootstrap": "~0.10.0",
+    "angular-resource": "~1.2.21"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.20"

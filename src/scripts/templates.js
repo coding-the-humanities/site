@@ -128,7 +128,7 @@ angular.module("post/postList.html", []).run(["$templateCache", function($templa
     "         class=\"triggered\"\n" +
     "         class=\"posts\">\n" +
     "\n" +
-    "  <post-item ng-repeat=\"post in postList.posts | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
+    "  <post-item ng-repeat=\"post in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
     "             selected=\"{{post.selected}}\"\n" +
     "             post=\"post\">\n" +
     "  </post-item>\n" +

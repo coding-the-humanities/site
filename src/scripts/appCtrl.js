@@ -1,14 +1,18 @@
 (function(){
   'use strict';
-  angular.module('cth').controller('AppCtrl', ['$state', '$timeout', AppCtrl]);
+  angular.module('cth').controller('AppCtrl', ['$state', '$resource', '$timeout', AppCtrl]);
 
-  function AppCtrl($state, $timeout){
+  function AppCtrl($state, $resource, $timeout){
     var vm = this;
     vm.showHeader = true;
 
     // $timeout(function(){
     //   vm.showHeader = false;
     // }, 2000);
+    var sthing = $resource('api/pilot.json');
+    sthing.get(function(data){
+      console.log(data);
+    });
     
     
     vm.postOrder = '-posted';

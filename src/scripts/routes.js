@@ -12,9 +12,9 @@
       .state('posts', {
         url: '/posts',
         templateUrl: 'post/postList.html',
-        controller: 'PostCtrl as postList',
+        controller: 'BlockCtrl as blockList',
         resolve: {
-          posts: ['$http', function($http){
+          content: ['$http', function($http){
             return $http.get('/api/posts.json').then(function(response){
               var posts = response.data.posts;
               posts = _(posts).sortBy('posted').value().reverse();
@@ -26,11 +26,22 @@
       .state('posts.post', {
         url: '/:post_id',
       })
-      .state('about', {
+      .state('pilot', {
         url: '/pilot',
-        templateUrl: 'templates/pilot.html',
-        controller: 'PilotCtrl as pilot'
-
+        templateUrl: 'post/postList.html',
+        controller: 'BlockCtrl as blockList',
+        resolve: {
+          content: ['$http', function($http){
+            return $http.get('/api/pilot.json').then(function(response){
+              var posts = response.data.pilot;
+              posts = _(posts).sortBy('posted').value().reverse();
+              return posts;
+            }); 
+          }]
+        }
+      })
+      .state('pilot.block', {
+        url: '/:block_id',
       });
 
     $urlRouterProvider.when('/', '/posts');

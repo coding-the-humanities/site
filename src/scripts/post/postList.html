@@ -2,7 +2,7 @@
          class="triggered"
          class="posts">
 
-  <post-item ng-repeat="post in postList.posts | filter:{ tags: app.postFilter }| orderBy:app.postOrder"
+  <post-item ng-repeat="post in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder"
              selected="{{post.selected}}"
              post="post">
   </post-item>

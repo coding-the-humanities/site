@@ -58,8 +58,8 @@ module.exports =
 
   dataModels: [
     "yaml"
-    "concat:json"
-    "copy:json"
+    "concat:posts"
+    "concat:pilot"
   ]
 
   assets: [
