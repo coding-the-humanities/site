@@ -4,7 +4,7 @@
      ng-class="{selected: post.selected, expanded:post.expanded}">
 
 
-  <header>
+  <header class="post-header">
     <a ng-show="!post.selected" 
        class="state-link"
        href ui-sref="posts.post({post_id: post.id})">
@@ -26,28 +26,9 @@
 
   <div ng-switch="post.layout">
     <main ng-switch-when="pilot">
-
-      <section class="text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
-        <div ng-bind-html="post.content | markdown"></div>
-      </section>
-
-      <section class="meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2">
-        <table class="table">
-          <thead>
-            <th>Meta</th>
-          </thead>
-          <tr ng-repeat="author in post.authors">
-            <td>{{author}}</td>
-          </tr>
-        </table>
-      </section>
-
-
       <section class="students col-xs-12">
         <profiles people="post.students"></profiles>
       </section>
-
-
     </main>
 
     <main ng-switch-default>

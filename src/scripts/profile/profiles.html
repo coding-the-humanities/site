@@ -1,13 +1,31 @@
 <section class="profiles col-xs-12"> 
+  <section class="profile row">
+    <header class="col-xs-12 col-lg-5">
+      <img ng-src="./images/students/angeliki-large.jpg"/>
+    </header>
+    <!-- <section class="meta col&#45;xs&#45;6 col&#45;lg&#45;2"> -->
+    <!--   <table class="table"> -->
+    <!--     <thead> -->
+    <!--       <th>Roel Bakkum</th> -->
+    <!--     </thead> -->
+    <!--     <tr> -->
+    <!--       <td>Musicology</td> -->
+    <!--     </tr> -->
+    <!--   </table> -->
+    <!-- </section> -->
+    <section class="motivation col-xs-10 col-xs-offset-1 col-lg-5 col-lg-offset-1">
+      <p>"My study, art history, is one that can be quite traditional, but is also one that is adapting to the digital world rather fast. I would love to widen my understanding of these processes and participate in them through this course. Had there been any suitable courses in the third block I probably would not have been able to participate, but since there were none I have the time. Next to that I have always had an affinity with information technology, but I never really got into it: this seems like a good opportunity!"</p>
+    </section>
+  </section>
 
-  <div ng-repeat="gallery in galleries" class="slideshow">
-    <carousel disable-ng-animate ng-class="'visible-' + gallery.pageSize + '-block'">
+  <div ng-repeat="gallery in galleries" class="row slideshow">
+    <carousel ng-class="'visible-' + gallery.pageSize + '-block'">
       <slide ng-repeat="slide in gallery.profiles" active="slide.active">
         <div ng-repeat="profile in slide">
           <img ng-src="{{profile.image.url}}" ng-class="'col-xs-' + gallery.colSize">
         </div>
-      </slide>
-    </carousel>
+      </slide> </carousel>
   </div>
+
 
 </section>

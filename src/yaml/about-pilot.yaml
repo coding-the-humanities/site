@@ -1,6 +1,7 @@
 title: About the Pilot
 posted: 2012-06-24 21:57:27 
 authors:
+- Jan Hein Hoogstad
 - Sabrina Sauer
 images:
 - url: ./images/launch-event.jpg
@@ -8,39 +9,39 @@ layout: pilot
 tags:
 - about
 students:
-- name: Charlie
-  image:
-    url: "./images/students/roel.jpg"
 - name: Reika
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/reika.jpg"
 - name: Taeke
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/taeke.jpg"
+- name: Charlie
+  image:
+    url: "./images/students/charlie.jpg"
 - name: Aram
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/aram.jpg"
 - name: Angeliki
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/angeliki.jpg"
 - name: Robert-Jan
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/robert-jan.jpg"
 - name: Leander
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/leander.jpg"
 - name: Erik
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/erik.jpg"
 - name: Moira
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/moira.jpg"
 - name: Steven
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/steven.jpg"
 - name: Reinier
   image:
-    url: "./images/students/roel.jpg"
+    url: "./images/students/reinier.jpg"
 - name: Roel
   image:
     url: "./images/students/roel.jpg"

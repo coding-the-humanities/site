@@ -73,7 +73,7 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
     "     ng-class=\"{selected: post.selected, expanded:post.expanded}\">\n" +
     "\n" +
     "\n" +
-    "  <header>\n" +
+    "  <header class=\"post-header\">\n" +
     "    <a ng-show=\"!post.selected\" \n" +
     "       class=\"state-link\"\n" +
     "       href ui-sref=\"posts.post({post_id: post.id})\">\n" +
@@ -95,28 +95,9 @@ angular.module("post/postItem.html", []).run(["$templateCache", function($templa
     "\n" +
     "  <div ng-switch=\"post.layout\">\n" +
     "    <main ng-switch-when=\"pilot\">\n" +
-    "\n" +
-    "      <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
-    "        <div ng-bind-html=\"post.content | markdown\"></div>\n" +
-    "      </section>\n" +
-    "\n" +
-    "      <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
-    "        <table class=\"table\">\n" +
-    "          <thead>\n" +
-    "            <th>Meta</th>\n" +
-    "          </thead>\n" +
-    "          <tr ng-repeat=\"author in post.authors\">\n" +
-    "            <td>{{author}}</td>\n" +
-    "          </tr>\n" +
-    "        </table>\n" +
-    "      </section>\n" +
-    "\n" +
-    "\n" +
     "      <section class=\"students col-xs-12\">\n" +
     "        <profiles people=\"post.students\"></profiles>\n" +
     "      </section>\n" +
-    "\n" +
-    "\n" +
     "    </main>\n" +
     "\n" +
     "    <main ng-switch-default>\n" +
@@ -158,16 +139,34 @@ angular.module("post/postList.html", []).run(["$templateCache", function($templa
 angular.module("profile/profiles.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("profile/profiles.html",
     "<section class=\"profiles col-xs-12\"> \n" +
+    "  <section class=\"profile row\">\n" +
+    "    <header class=\"col-xs-12 col-lg-5\">\n" +
+    "      <img ng-src=\"./images/students/angeliki-large.jpg\"/>\n" +
+    "    </header>\n" +
+    "    <!-- <section class=\"meta col&#45;xs&#45;6 col&#45;lg&#45;2\"> -->\n" +
+    "    <!--   <table class=\"table\"> -->\n" +
+    "    <!--     <thead> -->\n" +
+    "    <!--       <th>Roel Bakkum</th> -->\n" +
+    "    <!--     </thead> -->\n" +
+    "    <!--     <tr> -->\n" +
+    "    <!--       <td>Musicology</td> -->\n" +
+    "    <!--     </tr> -->\n" +
+    "    <!--   </table> -->\n" +
+    "    <!-- </section> -->\n" +
+    "    <section class=\"motivation col-xs-10 col-xs-offset-1 col-lg-5 col-lg-offset-1\">\n" +
+    "      <p>\"My study, art history, is one that can be quite traditional, but is also one that is adapting to the digital world rather fast. I would love to widen my understanding of these processes and participate in them through this course. Had there been any suitable courses in the third block I probably would not have been able to participate, but since there were none I have the time. Next to that I have always had an affinity with information technology, but I never really got into it: this seems like a good opportunity!\"</p>\n" +
+    "    </section>\n" +
+    "  </section>\n" +
     "\n" +
-    "  <div ng-repeat=\"gallery in galleries\" class=\"slideshow\">\n" +
-    "    <carousel disable-ng-animate ng-class=\"'visible-' + gallery.pageSize + '-block'\">\n" +
+    "  <div ng-repeat=\"gallery in galleries\" class=\"row slideshow\">\n" +
+    "    <carousel ng-class=\"'visible-' + gallery.pageSize + '-block'\">\n" +
     "      <slide ng-repeat=\"slide in gallery.profiles\" active=\"slide.active\">\n" +
     "        <div ng-repeat=\"profile in slide\">\n" +
     "          <img ng-src=\"{{profile.image.url}}\" ng-class=\"'col-xs-' + gallery.colSize\">\n" +
     "        </div>\n" +
-    "      </slide>\n" +
-    "    </carousel>\n" +
+    "      </slide> </carousel>\n" +
     "  </div>\n" +
+    "\n" +
     "\n" +
     "</section>\n" +
     "");
