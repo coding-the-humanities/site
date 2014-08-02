@@ -21,7 +21,7 @@
     function selectBlock(blocks, params){
       var selectedBlocks = _.map(blocks, function(block, index){
         var block_id = stringManipulators.dasherize(block.title);
-        if(params.post_id === block_id){
+        if(params.block_id === block_id){
           block.selected = true;
           block.expanded = true;
         } else {

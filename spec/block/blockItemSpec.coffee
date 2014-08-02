@@ -5,6 +5,7 @@ describe 'blockItem directive', ->
 
   block =
     title: "Hello World"
+    layout: "posts"
     images:
       url: "#/images/test0.jpg"
 
@@ -12,6 +13,7 @@ describe 'blockItem directive', ->
     inject ($injector) ->
       $rootScope = $injector.get '$rootScope'
       $compile = $injector.get '$compile'
+
       @$httpBackend = $injector.get '$httpBackend'
 
       @$scope = $rootScope.$new()
@@ -27,6 +29,9 @@ describe 'blockItem directive', ->
   describe 'default state', ->
     it 'has a class of block', ->
       expect(@element.hasClass('block')).toBe(true)
+
+    it 'has a class of posts', ->
+      expect(@element.hasClass('posts')).toBe(true)
 
     it 'does not have a class selected', ->
       expect(@element.hasClass('selected')).toBe(false)

@@ -47,7 +47,8 @@ $font-family-base: $font-family-monospace !default;
 
 @import "./src/styles/_normalize";
 @import "./bootstrap/bootstrap";
-@import "./src/styles/_featured-spotlight";
+@import "./src/styles/_block";
+@import "./src/styles/_profiles";
 @import "./src/styles/_site-logo";
 
 

@@ -12,6 +12,7 @@ describe 'BlockItemCtrl', ->
   beforeEach ->
     inject ($injector) ->
       @controllerConstructor = $injector.get '$controller'
+      @$state = $injector.get '$state'
 
       @scope = {}
       @scope.block = new Post
@@ -21,19 +22,45 @@ describe 'BlockItemCtrl', ->
 
       BlockItemCtrl = @controllerConstructor 'BlockItemCtrl',
         $scope: @scope
-        $element: {}
+        $state: @$state 
         stringManipulators: stringManipulators
-        scroll: scroll
 
       @block = BlockItemCtrl.block
 
-  describe 'post property', ->
+  describe 'block property', ->
      it 'has the correct id', ->
        expect(@dasherize).toHaveBeenCalledWith 'Hello World'
        expect(@block.id).not.toBe undefined
 
      it 'has the correct headerImage property', ->
        expect(@block.headerImage.url).toBe "#/images/test0.jpg"
+
+    describe 'dynamic urls', ->
+      describe 'one route', ->
+        beforeEach ->
+          @$state.current.name = 'posts'
+          BlockItemCtrl = @controllerConstructor 'BlockItemCtrl',
+            $scope: @scope
+            $state: @$state 
+            stringManipulators: stringManipulators
+
+          @block = BlockItemCtrl.block
+
+        it 'has the correct url property', ->
+          expect(@block.url).toBe "/posts/hello-world"
+
+      describe 'another route', ->
+        beforeEach ->
+          @$state.current.name = 'pilot'
+          BlockItemCtrl = @controllerConstructor 'BlockItemCtrl',
+            $scope: @scope
+            $state: @$state
+            stringManipulators: stringManipulators
+
+          @block = BlockItemCtrl.block
+
+        it 'has the correct url property', ->
+          expect(@block.url).toBe "/pilot/hello-world"
   
   describe 'post expansion', ->
     it "toggles state", ->

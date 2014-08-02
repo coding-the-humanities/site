@@ -2,16 +2,19 @@ angular.module('templates-cth', ['block/blockItem.html', 'block/blockList.html',
 
 angular.module("block/blockItem.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("block/blockItem.html",
-    "<section class=\"block\"\n" +
+    "<section class=\"block {{block.layout}}\"\n" +
     "     id=\"{{block.id}}\" \n" +
     "     ui-sref-active=\"active\" class=\"active\" \n" +
-    "     ng-class=\"{selected: block.selected, expanded:block.expanded}\">\n" +
+    "     ng-class=\"{selected: block.selected, \n" +
+    "     expanded:block.expanded}\">\n" +
+    "                \n" +
     "\n" +
     "\n" +
     "  <header class=\"block-header\">\n" +
     "    <a ng-show=\"!block.selected\" \n" +
     "       class=\"state-link\"\n" +
-    "       href ui-sref=\"posts.post({post_id: block.id})\">\n" +
+    "       ng-click=\"toggleExpanded()\"\n" +
+    "       ng-href=\"{{block.url}}\">\n" +
     "\n" +
     "      <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
     "\n" +
@@ -31,7 +34,7 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "  <div ng-switch=\"block.layout\">\n" +
     "    <article ng-switch-when=\"pilot\">\n" +
     "      <section class=\"students col-xs-12\">\n" +
-    "      <!--   <profiles people=\"block.students\"></profiles> -->\n" +
+    "        <profiles people=\"block.students\"></profiles>\n" +
     "      </section>\n" +
     "    </article>\n" +
     "\n" +

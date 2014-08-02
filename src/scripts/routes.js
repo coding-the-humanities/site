@@ -23,8 +23,8 @@
           }]
         }
       })
-      .state('posts.post', {
-        url: '/:post_id',
+      .state('posts.block', {
+        url: '/:block_id',
       })
       .state('pilot', {
         url: '/pilot',

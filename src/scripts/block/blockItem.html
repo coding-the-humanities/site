@@ -1,13 +1,16 @@
-<section class="block"
+<section class="block {{block.layout}}"
      id="{{block.id}}" 
      ui-sref-active="active" class="active" 
-     ng-class="{selected: block.selected, expanded:block.expanded}">
+     ng-class="{selected: block.selected, 
+     expanded:block.expanded}">
+                
 
 
   <header class="block-header">
     <a ng-show="!block.selected" 
        class="state-link"
-       href ui-sref="posts.post({post_id: block.id})">
+       ng-click="toggleExpanded()"
+       ng-href="{{block.url}}">
 
       <img ng-src="{{block.headerImage.url}}"/>
 
@@ -27,7 +30,7 @@
   <div ng-switch="block.layout">
     <article ng-switch-when="pilot">
       <section class="students col-xs-12">
-      <!--   <profiles people="block.students"></profiles> -->
+        <profiles people="block.students"></profiles>
       </section>
     </article>
 

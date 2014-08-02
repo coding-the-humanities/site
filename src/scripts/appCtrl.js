@@ -1,8 +1,8 @@
 (function(){
   'use strict';
-  angular.module('cth').controller('AppCtrl', ['$state', '$resource', '$timeout', AppCtrl]);
+  angular.module('cth').controller('AppCtrl', ['$state', '$timeout', AppCtrl]);
 
-  function AppCtrl($state, $resource, $timeout){
+  function AppCtrl($state, $timeout){
     var vm = this;
     vm.showHeader = true;
 
