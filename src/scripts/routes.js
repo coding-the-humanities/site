@@ -11,7 +11,7 @@
     $stateProvider
       .state('posts', {
         url: '/posts',
-        templateUrl: 'post/postList.html',
+        templateUrl: 'block/blockList.html',
         controller: 'BlockCtrl as blockList',
         resolve: {
           content: ['$http', function($http){
@@ -28,14 +28,14 @@
       })
       .state('pilot', {
         url: '/pilot',
-        templateUrl: 'post/postList.html',
+        templateUrl: 'block/blockList.html',
         controller: 'BlockCtrl as blockList',
         resolve: {
           content: ['$http', function($http){
             return $http.get('/api/pilot.json').then(function(response){
-              var posts = response.data.pilot;
-              posts = _(posts).sortBy('posted').value().reverse();
-              return posts;
+              var blocks = response.data.pilot;
+              blocks = _(blocks).sortBy('posted').value().reverse();
+              return blocks;
             }); 
           }]
         }

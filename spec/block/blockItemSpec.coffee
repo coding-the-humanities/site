@@ -1,20 +1,22 @@
-xdescribe 'postItem directive', ->
+describe 'blockItem directive', ->
 
   beforeEach(module('cth'))
-  beforeEach(module('post/postItem.html'))
+  beforeEach(module('block/blockItem.html'))
 
-  post =
+  block =
     title: "Hello World"
     images:
       url: "#/images/test0.jpg"
 
   beforeEach ->
-    inject ($injector, $state) ->
-      @$scope = $injector.get '$rootScope'
+    inject ($injector) ->
+      $rootScope = $injector.get '$rootScope'
       $compile = $injector.get '$compile'
-      @$state = $injector.get '$state'
-      @$scope.post = post
-      @element = angular.element("<post-item post='post'></post-item>")
+      @$httpBackend = $injector.get '$httpBackend'
+
+      @$scope = $rootScope.$new()
+      @$scope.block = block
+      @element = angular.element("<block-item block='block'></block-item>")
       $compile(@element)(@$scope)
       @$scope.$digest()
 
@@ -23,8 +25,8 @@ xdescribe 'postItem directive', ->
 
 
   describe 'default state', ->
-    it 'has a class of post', ->
-      expect(@element.hasClass('post')).toBe(true)
+    it 'has a class of block', ->
+      expect(@element.hasClass('block')).toBe(true)
 
     it 'does not have a class selected', ->
       expect(@element.hasClass('selected')).toBe(false)
@@ -37,18 +39,19 @@ xdescribe 'postItem directive', ->
 
   describe 'expand item', ->
     beforeEach ->
-      @expansionLink.click()
+      @$httpBackend.expectGET('/api/posts.json').respond('{}')
 
     it 'toggles its expanded class', ->
-      expect(@element.hasClass('expanded')).toBe(true)
-      @expansionLink.click()
       expect(@element.hasClass('expanded')).toBe(false)
+      @expansionLink.click()
+      expect(@element.hasClass('expanded')).toBe(true)
 
 
   describe 'selected item', ->
     beforeEach ->
-      @$scope.post.selected = true
-      @$scope.$apply()
+      @$httpBackend.expectGET('/api/posts.json').respond('{}')
+      @$scope.block.selected = true
+      @$scope.$digest()
 
     it 'has a class of selected', ->
       expect(@element.hasClass('selected')).toBe(true)

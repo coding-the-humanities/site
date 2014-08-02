@@ -9,11 +9,6 @@
     // $timeout(function(){
     //   vm.showHeader = false;
     // }, 2000);
-    var sthing = $resource('api/pilot.json');
-    sthing.get(function(data){
-      console.log(data);
-    });
-    
     
     vm.postOrder = '-posted';
     vm.postFilter = '';

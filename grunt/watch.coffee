@@ -1,4 +1,13 @@
 module.exports =
+  grunt:
+    files: ["grunt/**/*.coffee"]
+
+  bowerComponents:
+    files: ["grunt/bowercopy.coffee"]
+    task: [
+      "bowercopy"
+    ]
+
   html:
     files: ["src/**/*.html", "!src/scripts/**/*.html"]
     tasks: [
@@ -18,7 +27,7 @@ module.exports =
     ]
 
   scripts:
-    files: ["src/scripts/**/*.js", "spec/**/*.coffee"]
+    files: ["src/scripts/**/*.js", "spec/**/*.coffee", "grunt/concat.coffee"]
     tasks: [
       "scripts"
     ]
@@ -26,7 +35,7 @@ module.exports =
       message: "hinting succesful"
 
   vendor:
-    files: ["src/vendor/*.js"]
+    files: ["src/vendor/*.js", "grunt/concat.coffee"]
     tasks: [
       "vendor"
     ]

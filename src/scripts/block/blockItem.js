@@ -1,15 +1,15 @@
 (function(){
   'use strict';
-  angular.module('cth').directive('postItem', ['$timeout', 'scroll', postItem]);
+  angular.module('cth').directive('blockItem', ['$timeout', 'scroll', blockItem]);
       
-  function postItem($timeout, scroll) {
+  function blockItem($timeout, scroll) {
     return {
       restrict: 'E',
       scope: {
-        post: '='
+        block: '='
       },
-      templateUrl: 'post/postItem.html',
-      controller: 'PostItemCtrl',
+      templateUrl: 'block/blockItem.html',
+      controller: 'BlockItemCtrl',
       replace: true,
       link: function(scope, element, attrs){
         attrs.$observe('selected', function(newValue, oldValue){

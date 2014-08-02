@@ -1,0 +1,52 @@
+<section class="block"
+     id="{{block.id}}" 
+     ui-sref-active="active" class="active" 
+     ng-class="{selected: block.selected, expanded:block.expanded}">
+
+
+  <header class="block-header">
+    <a ng-show="!block.selected" 
+       class="state-link"
+       href ui-sref="posts.post({post_id: block.id})">
+
+      <img ng-src="{{block.headerImage.url}}"/>
+
+      <h1>{{block.title | underscorize}}</h1>
+
+    </a>
+    <a ng-show="block.selected" 
+       class="expansion-link"
+       ng-click="toggleExpanded()">
+      <img ng-src="{{block.headerImage.url}}"/>
+
+      <h1>{{block.title | underscorize}}</h1>
+
+    </a>
+  </header>
+
+  <div ng-switch="block.layout">
+    <article ng-switch-when="pilot">
+      <section class="students col-xs-12">
+      <!--   <profiles people="block.students"></profiles> -->
+      </section>
+    </article>
+
+    <article ng-switch-default>
+      <section class="text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
+        <div ng-bind-html="block.content | markdown"></div>
+      </section>
+
+
+      <section class="meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2">
+        <table class="table">
+          <thead>
+            <th>Meta</th>
+          </thead>
+          <tr ng-repeat="author in block.authors">
+            <td>{{author}}</td>
+          </tr>
+        </table>
+      </section>
+    </article>
+  </div>
+</section>

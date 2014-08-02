@@ -1,4 +1,75 @@
-angular.module('templates-cth', ['common/templates/logo-blank.html', 'common/templates/logo.html', 'post/postItem.html', 'post/postList.html', 'profile/profiles.html']);
+angular.module('templates-cth', ['block/blockItem.html', 'block/blockList.html', 'common/templates/logo-blank.html', 'common/templates/logo.html', 'profile/profiles.html']);
+
+angular.module("block/blockItem.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("block/blockItem.html",
+    "<section class=\"block\"\n" +
+    "     id=\"{{block.id}}\" \n" +
+    "     ui-sref-active=\"active\" class=\"active\" \n" +
+    "     ng-class=\"{selected: block.selected, expanded:block.expanded}\">\n" +
+    "\n" +
+    "\n" +
+    "  <header class=\"block-header\">\n" +
+    "    <a ng-show=\"!block.selected\" \n" +
+    "       class=\"state-link\"\n" +
+    "       href ui-sref=\"posts.post({post_id: block.id})\">\n" +
+    "\n" +
+    "      <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
+    "\n" +
+    "      <h1>{{block.title | underscorize}}</h1>\n" +
+    "\n" +
+    "    </a>\n" +
+    "    <a ng-show=\"block.selected\" \n" +
+    "       class=\"expansion-link\"\n" +
+    "       ng-click=\"toggleExpanded()\">\n" +
+    "      <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
+    "\n" +
+    "      <h1>{{block.title | underscorize}}</h1>\n" +
+    "\n" +
+    "    </a>\n" +
+    "  </header>\n" +
+    "\n" +
+    "  <div ng-switch=\"block.layout\">\n" +
+    "    <article ng-switch-when=\"pilot\">\n" +
+    "      <section class=\"students col-xs-12\">\n" +
+    "      <!--   <profiles people=\"block.students\"></profiles> -->\n" +
+    "      </section>\n" +
+    "    </article>\n" +
+    "\n" +
+    "    <article ng-switch-default>\n" +
+    "      <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "        <div ng-bind-html=\"block.content | markdown\"></div>\n" +
+    "      </section>\n" +
+    "\n" +
+    "\n" +
+    "      <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
+    "        <table class=\"table\">\n" +
+    "          <thead>\n" +
+    "            <th>Meta</th>\n" +
+    "          </thead>\n" +
+    "          <tr ng-repeat=\"author in block.authors\">\n" +
+    "            <td>{{author}}</td>\n" +
+    "          </tr>\n" +
+    "        </table>\n" +
+    "      </section>\n" +
+    "    </article>\n" +
+    "  </div>\n" +
+    "</section>\n" +
+    "");
+}]);
+
+angular.module("block/blockList.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("block/blockList.html",
+    "<section ui-sref-active=\"active\" \n" +
+    "         class=\"triggered\"\n" +
+    "         class=\"posts\">\n" +
+    "\n" +
+    "  <block-item ng-repeat=\"block in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
+    "             selected=\"{{block.selected}}\"\n" +
+    "             block=\"block\">\n" +
+    "  </block-item>\n" +
+    "</section>\n" +
+    "");
+}]);
 
 angular.module("common/templates/logo-blank.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("common/templates/logo-blank.html",
@@ -62,77 +133,6 @@ angular.module("common/templates/logo.html", []).run(["$templateCache", function
     "<!--   </g> -->\n" +
     "<!--   </svg> -->\n" +
     "<!-- </section> -->\n" +
-    "");
-}]);
-
-angular.module("post/postItem.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("post/postItem.html",
-    "<section class=\"post\"\n" +
-    "     id=\"{{post.id}}\" \n" +
-    "     ui-sref-active=\"active\" class=\"active\" \n" +
-    "     ng-class=\"{selected: post.selected, expanded:post.expanded}\">\n" +
-    "\n" +
-    "\n" +
-    "  <header class=\"post-header\">\n" +
-    "    <a ng-show=\"!post.selected\" \n" +
-    "       class=\"state-link\"\n" +
-    "       href ui-sref=\"posts.post({post_id: post.id})\">\n" +
-    "\n" +
-    "      <img ng-src=\"{{post.headerImage.url}}\"/>\n" +
-    "\n" +
-    "      <h1>{{post.title | underscorize}}</h1>\n" +
-    "\n" +
-    "    </a>\n" +
-    "    <a ng-show=\"post.selected\" \n" +
-    "       class=\"expansion-link\"\n" +
-    "       ng-click=\"toggleExpanded()\">\n" +
-    "      <img ng-src=\"{{post.headerImage.url}}\"/>\n" +
-    "\n" +
-    "      <h1>{{post.title | underscorize}}</h1>\n" +
-    "\n" +
-    "    </a>\n" +
-    "  </header>\n" +
-    "\n" +
-    "  <div ng-switch=\"post.layout\">\n" +
-    "    <main ng-switch-when=\"pilot\">\n" +
-    "      <section class=\"students col-xs-12\">\n" +
-    "        <profiles people=\"post.students\"></profiles>\n" +
-    "      </section>\n" +
-    "    </main>\n" +
-    "\n" +
-    "    <main ng-switch-default>\n" +
-    "      <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
-    "        <div ng-bind-html=\"post.content | markdown\"></div>\n" +
-    "      </section>\n" +
-    "\n" +
-    "\n" +
-    "      <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
-    "        <table class=\"table\">\n" +
-    "          <thead>\n" +
-    "            <th>Meta</th>\n" +
-    "          </thead>\n" +
-    "          <tr ng-repeat=\"author in post.authors\">\n" +
-    "            <td>{{author}}</td>\n" +
-    "          </tr>\n" +
-    "        </table>\n" +
-    "      </section>\n" +
-    "    </main>\n" +
-    "  </div>\n" +
-    "</section>\n" +
-    "");
-}]);
-
-angular.module("post/postList.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("post/postList.html",
-    "<section ui-sref-active=\"active\" \n" +
-    "         class=\"triggered\"\n" +
-    "         class=\"posts\">\n" +
-    "\n" +
-    "  <post-item ng-repeat=\"post in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
-    "             selected=\"{{post.selected}}\"\n" +
-    "             post=\"post\">\n" +
-    "  </post-item>\n" +
-    "</section>\n" +
     "");
 }]);
 
