@@ -34,7 +34,7 @@
           content: ['$http', function($http){
             return $http.get('/api/pilot.json').then(function(response){
               var blocks = response.data.pilot;
-              blocks = _(blocks).sortBy('posted').value().reverse();
+              blocks = _(blocks).sortBy('order').value();
               return blocks;
             }); 
           }]

@@ -24,6 +24,8 @@ $colorGreen: #A5CC45 !default;
 $colorRed: #E34D2F !default;
 $colorGrayLight: #eeeeee !default;
 
+$siteColors: $colorGreen, $colorRed, $colorYellow, $colorBlue;
+
 $list-group-bg: black;
 $list-group-border: none;
 $list-group-active-bg: $colorYellow !default;
@@ -47,7 +49,10 @@ $font-family-base: $font-family-monospace !default;
 
 @import "./src/styles/_normalize";
 @import "./bootstrap/bootstrap";
+
 @import "./src/styles/_block";
+@import "./src/styles/_pilot";
+
 @import "./src/styles/_profiles";
 @import "./src/styles/_site-logo";
 

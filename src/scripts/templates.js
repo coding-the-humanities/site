@@ -1,4 +1,10 @@
-angular.module('templates-cth', ['block/blockItem.html', 'block/blockList.html', 'common/templates/logo-blank.html', 'common/templates/logo.html', 'profile/profiles.html']);
+angular.module('templates-cth', ['block/blockContent.html', 'block/blockItem.html', 'block/blockList.html', 'common/templates/logo-blank.html', 'common/templates/logo.html', 'profile/profiles.html']);
+
+angular.module("block/blockContent.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("block/blockContent.html",
+    "<div class=\"markdown\" ng-bind-html=\"blockContent.content\"></div>\n" +
+    "");
+}]);
 
 angular.module("block/blockItem.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("block/blockItem.html",
@@ -7,54 +13,74 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "     ui-sref-active=\"active\" class=\"active\" \n" +
     "     ng-class=\"{selected: block.selected, \n" +
     "     expanded:block.expanded}\">\n" +
-    "                \n" +
-    "\n" +
-    "\n" +
-    "  <header class=\"block-header\">\n" +
-    "    <a ng-show=\"!block.selected\" \n" +
-    "       class=\"state-link\"\n" +
-    "       ng-click=\"toggleExpanded()\"\n" +
-    "       ng-href=\"{{block.url}}\">\n" +
-    "\n" +
-    "      <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
-    "\n" +
-    "      <h1>{{block.title | underscorize}}</h1>\n" +
-    "\n" +
-    "    </a>\n" +
-    "    <a ng-show=\"block.selected\" \n" +
-    "       class=\"expansion-link\"\n" +
-    "       ng-click=\"toggleExpanded()\">\n" +
-    "      <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
-    "\n" +
-    "      <h1>{{block.title | underscorize}}</h1>\n" +
-    "\n" +
-    "    </a>\n" +
-    "  </header>\n" +
-    "\n" +
     "  <div ng-switch=\"block.layout\">\n" +
-    "    <article ng-switch-when=\"pilot\">\n" +
-    "      <section class=\"students col-xs-12\">\n" +
-    "        <profiles people=\"block.students\"></profiles>\n" +
-    "      </section>\n" +
-    "    </article>\n" +
+    "                \n" +
+    "    <header ng-switch-when=\"pilot\"\n" +
+    "            class=\"block-header\">\n" +
+    "      <a ng-show=\"!block.selected\" \n" +
+    "         class=\"state-link\"\n" +
+    "         ng-click=\"toggleExpanded()\"\n" +
+    "         ng-href=\"{{block.url}}\">\n" +
     "\n" +
-    "    <article ng-switch-default>\n" +
-    "      <section class=\"text-content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
-    "        <div ng-bind-html=\"block.content | markdown\"></div>\n" +
-    "      </section>\n" +
+    "        <h1>{{ block.order }} - {{block.title | underscorize}}</h1>\n" +
+    "\n" +
+    "      </a>\n" +
+    "      <a ng-show=\"block.selected\" \n" +
+    "         class=\"expansion-link\"\n" +
+    "         ng-click=\"toggleExpanded()\">\n" +
+    "\n" +
+    "        <h1>{{ block.order }} - {{block.title | underscorize}}</h1>\n" +
+    "\n" +
+    "      </a>\n" +
+    "    </header>\n" +
+    "\n" +
+    "    <header ng-switch-default\n" +
+    "            class=\"block-header\">\n" +
+    "\n" +
+    "      <a ng-show=\"!block.selected\" \n" +
+    "         class=\"state-link\"\n" +
+    "         ng-click=\"toggleExpanded()\"\n" +
+    "         ng-href=\"{{block.url}}\">\n" +
+    "\n" +
+    "        <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
+    "\n" +
+    "        <h1>{{block.title | underscorize}}</h1>\n" +
+    "\n" +
+    "      </a>\n" +
+    "      <a ng-show=\"block.selected\" \n" +
+    "         class=\"expansion-link\"\n" +
+    "         ng-click=\"toggleExpanded()\">\n" +
+    "        <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
+    "\n" +
+    "        <h1>{{block.title | underscorize}}</h1>\n" +
+    "\n" +
+    "      </a>\n" +
+    "    </header>\n" +
+    "\n" +
+    "      <article ng-switch-when=\"pilot\">\n" +
+    "        <section class=\"content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "          <block-content markdown=\"block.content\"></block-content>\n" +
+    "        </section>\n" +
+    "      </article>\n" +
+    "\n" +
+    "      <article ng-switch-default>\n" +
+    "        <section class=\"content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "          <div ng-bind-html=\"block.content | markdown\"></div>\n" +
+    "        </section>\n" +
     "\n" +
     "\n" +
-    "      <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
-    "        <table class=\"table\">\n" +
-    "          <thead>\n" +
-    "            <th>Meta</th>\n" +
-    "          </thead>\n" +
-    "          <tr ng-repeat=\"author in block.authors\">\n" +
-    "            <td>{{author}}</td>\n" +
-    "          </tr>\n" +
-    "        </table>\n" +
-    "      </section>\n" +
-    "    </article>\n" +
+    "        <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
+    "          <table class=\"table\">\n" +
+    "            <thead>\n" +
+    "              <th>Meta</th>\n" +
+    "            </thead>\n" +
+    "            <tr ng-repeat=\"author in block.authors\">\n" +
+    "              <td>{{author}}</td>\n" +
+    "            </tr>\n" +
+    "          </table>\n" +
+    "        </section>\n" +
+    "      </article>\n" +
+    "\n" +
     "  </div>\n" +
     "</section>\n" +
     "");

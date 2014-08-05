@@ -22,18 +22,33 @@ describe 'BlockItemCtrl', ->
 
       BlockItemCtrl = @controllerConstructor 'BlockItemCtrl',
         $scope: @scope
-        $state: @$state 
+        $state: @$state
         stringManipulators: stringManipulators
 
       @block = BlockItemCtrl.block
 
-  describe 'block property', ->
+  describe 'id property', ->
      it 'has the correct id', ->
        expect(@dasherize).toHaveBeenCalledWith 'Hello World'
        expect(@block.id).not.toBe undefined
 
+  describe 'layout', ->
+     it 'has a layout property', ->
+       expect(@block.layout).toBe 'post'
+
+  describe 'images property', ->
      it 'has the correct headerImage property', ->
        expect(@block.headerImage.url).toBe "#/images/test0.jpg"
+
+     it 'does not have an headerImage without images', ->
+       @scope.block = new Post
+       @scope.block.images = []
+
+       BlockItemCtrl = @controllerConstructor 'BlockItemCtrl',
+         $scope: @scope
+       @block = BlockItemCtrl.block
+
+       expect(@block.headerImage).toBe undefined
 
     describe 'dynamic urls', ->
       describe 'one route', ->

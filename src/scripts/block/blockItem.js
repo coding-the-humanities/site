@@ -12,13 +12,15 @@
       controller: 'BlockItemCtrl',
       replace: true,
       link: function(scope, element, attrs){
-        attrs.$observe('selected', function(newValue, oldValue){
+        attrs.$observe('selected', updateSelection);
+
+        function updateSelection(newValue, oldValue){
           if(newValue === "true"){
             $timeout(function(){
               scroll.toTop(element);
             }, 500);
           }
-        });
+        }
       }
     };
   }

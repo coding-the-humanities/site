@@ -6,9 +6,7 @@ module.exports =
     dest: "dev/"
 
   css:
-   expand: true
-   cwd: "dev"
-   src: "styles/**/*.{css,scss}"
+   src: "src/styles/**/*.{css,scss}"
    dest: "dev/"
 
   html:

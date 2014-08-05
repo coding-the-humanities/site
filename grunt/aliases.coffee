@@ -53,6 +53,7 @@ module.exports =
   ]
   
   css: [
+    "copy:css"
     "sass"
   ]
 

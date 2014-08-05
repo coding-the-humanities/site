@@ -9,7 +9,15 @@
 
     vm.block = $scope.block;
     vm.block.id = stringManipulators.dasherize(vm.block.title);
-    vm.block.headerImage = vm.block.images[0];
+
+    if(vm.block.images){
+      vm.block.headerImage = vm.block.images[0];
+    }
+
+    if(!vm.block.layout){
+      vm.block.layout = "post";
+    }
+
     vm.block.url = $state.href(stateName + ".block", {block_id: vm.block.id});
     
     $scope.toggleExpanded = function(){
