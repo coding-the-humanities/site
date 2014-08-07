@@ -8,8 +8,6 @@ images:
 tags:
 - article
 content: |
-  # When All We Have Is A Hammer
-
   Coding the Humanities is not about technology or even programming. It is all about tools. Software is a blind spot for the humanities. While our discipline is deeply invested in self-reflection, we hardly ever think about the digital tools that we use to produce and disseminate these deep thoughts. As a result, we fail to see the obvious. The applications that facilitate our teaching and research, were not written for us, let alone developed by us. In fact, they are unfit for our needs.
 
   In our research, we use a wordprocessor for almost everything. This factotum is part of a larger suite of proprietary enterprise applications, which is appropriately named after its intended use context. In an office setting this swiss army knife may be highly effective, but for research purposes it is rather blunt. Our pimped up typewriter does not offer any form of semantic mark up, has no citation management, and discourages collaboration. 

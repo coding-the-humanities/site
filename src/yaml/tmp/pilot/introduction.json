@@ -3,9 +3,14 @@
   "posted": "2012-06-24T21:57:27.000Z",
   "order": 4,
   "layout": "pilot",
+  "images": [
+    {
+      "url": "./images/blurred-lines.jpg"
+    }
+  ],
   "tags": [
     "pilot",
     "documentation"
   ],
-  "content": "# Coding the Humanities presents: Housemouse\n\nThe final project, developed over a period of 4 weeks is best introduced and described by the team (link to video)\n"
+  "content": "The final project, developed over a period of 4 weeks is best introduced and described by the team (link to video)\n"
 }

@@ -11,17 +11,17 @@ body.header-on-screen {
   .logo {
     width: 100vw;
     height: 100vh;
-    background-color: $colorGreen;
+    background-color: $brand-primary;
   }
 
   .navbar {
     bottom: 0;
-    font-family: NittyBold;
-    opacity: 1;
     margin: 0;
+    font-family: NittyBold;
     border: none;
+
     ul {
-      width: 100%;
+      @include stretch;
     }
 
     li {

@@ -13,29 +13,8 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "     ui-sref-active=\"active\" class=\"active\" \n" +
     "     ng-class=\"{selected: block.selected, \n" +
     "     expanded:block.expanded}\">\n" +
-    "  <div ng-switch=\"block.layout\">\n" +
-    "                \n" +
-    "    <header ng-switch-when=\"pilot\"\n" +
-    "            class=\"block-header\">\n" +
-    "      <a ng-show=\"!block.selected\" \n" +
-    "         class=\"state-link\"\n" +
-    "         ng-click=\"toggleExpanded()\"\n" +
-    "         ng-href=\"{{block.url}}\">\n" +
     "\n" +
-    "        <h1>{{ block.order }} - {{block.title | underscorize}}</h1>\n" +
-    "\n" +
-    "      </a>\n" +
-    "      <a ng-show=\"block.selected\" \n" +
-    "         class=\"expansion-link\"\n" +
-    "         ng-click=\"toggleExpanded()\">\n" +
-    "\n" +
-    "        <h1>{{ block.order }} - {{block.title | underscorize}}</h1>\n" +
-    "\n" +
-    "      </a>\n" +
-    "    </header>\n" +
-    "\n" +
-    "    <header ng-switch-default\n" +
-    "            class=\"block-header\">\n" +
+    "    <header class=\"block-header\">\n" +
     "\n" +
     "      <a ng-show=\"!block.selected\" \n" +
     "         class=\"state-link\"\n" +
@@ -57,17 +36,12 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "      </a>\n" +
     "    </header>\n" +
     "\n" +
-    "      <article ng-switch-when=\"pilot\">\n" +
-    "        <section class=\"content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
-    "          <block-content markdown=\"block.content\"></block-content>\n" +
-    "        </section>\n" +
-    "      </article>\n" +
-    "\n" +
-    "      <article ng-switch-default>\n" +
-    "        <section class=\"content col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
-    "          <div ng-bind-html=\"block.content | markdown\"></div>\n" +
-    "        </section>\n" +
-    "\n" +
+    "      <article>\n" +
+    "        <h1>{{block.title}}</h1>\n" +
+    "        <block-content markdown=\"block.content\" \n" +
+    "                       class=\"content col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "        </block-content>\n" +
+    "          \n" +
     "\n" +
     "        <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
     "          <table class=\"table\">\n" +

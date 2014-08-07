@@ -1,0 +1,36 @@
+title: From Student to Researcher
+posted: 2012-06-24 21:57:27 
+order: 1
+layout: pilot
+images:
+- url: ./images/from-student-to-researcher.jpg
+- url: ./images/blurred-lines.jpg
+tags:
+- pilot
+- documentation
+content: |
+  > “I learned that I really like the humanities”
+
+  Our month long pilot program sought to investigate three questions:  
+
+  1. How can we empower humanities students to develop digital tools to do humanities’ research. 
+  
+  2. How can collaborations with private parties can enrich educational experiences 
+  
+  3. How can an alternative classroom setting stimulate new types of learning. 
+  
+  Through this intensive collaboratively-oriented educational course, inspiration, input and reflection from private parties and the enthusiastic efforts of the involved students in the co-workspace that was set up, Coding the Humanities succeeded in answering these questions and reaching its goals. 
+
+  The latter can be summarized as follows: The course helps students and researchers understand the various technologically mediated objects that they are studying.
+
+  > “The whole experience has been a blast! From programming to the collaborative progress. Even the great amount of information in a short time really worked for me. I think this style of education just really fits me.”
+
+  It facilitates the development of custom tools, rather than using ready-made ones, which improves the actual practice of humanities research as well as (the quantity and quality) of its output. This is especially relevant, keeping in mind the ever-growing demand in the public and private sector for academics who can read and write code.
+
+  One of the goals of the pilot was the empowerment of the humanities students to become confident researchers who can build their own digital tools. Building their own tools allowed students to investigate and question the content and boundaries of data sets, and learn about the language of programming through actual programming: about HTML, CSS, JavaScript, Polymer, how to create webcomponents and how to share their work using GIT. This sharing of code was essential to creating their eventual “Coding the Humanities: Housemouse” project. In the set up of the pilot, the students were treated as team members – who worked in small groups on their part of the project, aided by the instructors who for example engaged the group in pair programming sessions and set weekly deadlines to complete parts of the project or present the research-in-the-making to visitors and experts during weekly evening events.
+
+  The students were decidedly positive in their assessment of their Coding the Humanities experience.
+
+
+  > “It makes me feel like I can actually do useful stuff”
+  > “When Jan Hein en Marijn did a pair programming session. They live coded a little project as an example. It was great to see how fast they were able to make something work on the screen. It was great fun and I learned a lot from it.”

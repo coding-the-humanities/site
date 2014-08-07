@@ -13,6 +13,7 @@ describe 'blockContent directive', ->
     inject ($injector) ->
       $rootScope = $injector.get '$rootScope'
       $compile = $injector.get '$compile'
+      @$timeout = $injector.get '$timeout'
 
       @$httpBackend = $injector.get '$httpBackend'
       @$httpBackend.expectGET('api/posts.json').respond('{}')
@@ -26,7 +27,6 @@ describe 'blockContent directive', ->
 
   describe 'default state', ->
     it 'has a class of markdown', ->
+      @$timeout.flush()
       blockquote = @element.find('blockquote')
-      setTimeout ->
-        expect(blockquote.hasClass('blockquote-reverse')).toBe(true)
-      , 0
+      expect(blockquote.hasClass('blockquote-reverse')).toBe(true)

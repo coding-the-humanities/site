@@ -8,8 +8,6 @@ images:
 tags:
 - article
 content: |
-  # Blurred Lines: Literary Perspectives on Programming Languages
-
   I remember the day when I drew that first line on the screen of my computer using a command something like < line (x,y) >. I clicked "run" and indeed a line appeared. I had interacted with a machine that I'd formerly though of as both an enabled typewriter and a black box at the same time. I learned that my computer and I were capable of much more than text processing. 
 
   When I clicked run that day, something clicked within me too: I realised that programming and markup languages are just another type of language, only slightly different from those I'd been using my entire life. Treating programming languages as languages made them accessible to me. Yet, computer languages seemed much more able to eliminate ambiguity and appeared to be always performative.
