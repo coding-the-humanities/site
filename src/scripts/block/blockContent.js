@@ -12,9 +12,9 @@
       templateUrl: 'block/blockContent.html',
       replace: true, 
       link: function(scope, element, attrs, controller){
-        $timeout(function(){
-          element.children().filter('blockquote').addClass("blockquote-reverse").end();
-        }, 0);
+        // $timeout(function(){
+        //   element.children().filter('blockquote').addClass("blockquote").end();
+        // }, 0);
       }
     };
   }

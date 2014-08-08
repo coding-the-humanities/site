@@ -23,7 +23,7 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "\n" +
     "        <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
     "\n" +
-    "        <h1>{{block.title | underscorize}}</h1>\n" +
+    "        <h1>{{block.title}}</h1>\n" +
     "\n" +
     "      </a>\n" +
     "      <a ng-show=\"block.selected\" \n" +
@@ -31,16 +31,43 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "         ng-click=\"toggleExpanded()\">\n" +
     "        <img ng-src=\"{{block.headerImage.url}}\"/>\n" +
     "\n" +
-    "        <h1>{{block.title | underscorize}}</h1>\n" +
+    "        <h1>{{block.title}}</h1>\n" +
     "\n" +
     "      </a>\n" +
     "    </header>\n" +
     "\n" +
-    "      <article>\n" +
+    "    <ng-switch on=\"block.layout\">\n" +
+    "      <article ng-switch-when=\"pilot\"\n" +
+    "           class=\"block-content\">\n" +
     "        <h1>{{block.title}}</h1>\n" +
-    "        <block-content markdown=\"block.content\" \n" +
-    "                       class=\"content col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
-    "        </block-content>\n" +
+    "        <section class=\"sidebar hidden-xs col-sm-4 col-lg-2\">\n" +
+    "          <nav class=\"toc\">\n" +
+    "            <table class=\"table\">\n" +
+    "              <thead>\n" +
+    "                <th>Contents</th>\n" +
+    "                <tr ng-repeat=\"block in blocks\">\n" +
+    "                  <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
+    "                </tr>\n" +
+    "              </tr>\n" +
+    "              </thead>\n" +
+    "            </table>\n" +
+    "          </nav>\n" +
+    "\n" +
+    "          <!-- <img src=\"./images/angeliki&#45;in&#45;action.jpg\"></img> -->\n" +
+    "\n" +
+    "        </section>\n" +
+    "\n" +
+    "        <section ng-bind-html=\"block.content | markdown\" \n" +
+    "                 class=\"col-xs-12 col-sm-7 col-sm-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "        </section>\n" +
+    "      </article>\n" +
+    "\n" +
+    "      <article ng-switch-default\n" +
+    "               class=\"block-content\">\n" +
+    "        <h1>{{block.title}}</h1>\n" +
+    "        <section ng-bind-html=\"block.content | markdown\" \n" +
+    "                 class=\"col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "        </section>\n" +
     "          \n" +
     "\n" +
     "        <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
@@ -54,6 +81,7 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "          </table>\n" +
     "        </section>\n" +
     "      </article>\n" +
+    "    </ng-switch>\n" +
     "\n" +
     "  </div>\n" +
     "</section>\n" +
@@ -68,7 +96,7 @@ angular.module("block/blockList.html", []).run(["$templateCache", function($temp
     "\n" +
     "  <block-item ng-repeat=\"block in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
     "             selected=\"{{block.selected}}\"\n" +
-    "             block=\"block\">\n" +
+    "             block=\"block\" blocks=\"blockList.blocks\">\n" +
     "  </block-item>\n" +
     "</section>\n" +
     "");

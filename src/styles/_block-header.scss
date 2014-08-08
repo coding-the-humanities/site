@@ -1,0 +1,45 @@
+.block-header {
+  clear: both;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin: 0 0 0 0;
+
+
+  h1 {
+    @include negative-colors;
+    user-select: none;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0px;
+    bottom: 0.7em;
+    margin: 0;
+    width: 100%;
+    padding: 0.7em 1em;
+    opacity: 0.2;
+  }
+
+  img {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+
+  .selector {
+    display: block;
+    opacity: 0;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $brand-primary;
+  }
+
+  &:hover {
+    h1 {
+      color: white; 
+      opacity: 0.9;
+    }
+  }
+}

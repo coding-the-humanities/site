@@ -25,7 +25,7 @@ describe 'blockContent directive', ->
       $compile(@element)(@$scope)
       @$scope.$digest()
 
-  describe 'default state', ->
+  xdescribe 'default state', ->
     it 'has a class of markdown', ->
       @$timeout.flush()
       blockquote = @element.find('blockquote')

@@ -1,23 +1,14 @@
-.pilot {
-  &.expanded {
-    section.meta {
-      display: none;
-    }
-  }
-}
-
-@for $i from 0 to 4 {
-  $level-color: nth($siteColors, $i + 1);
-  .pilot:nth-of-type(#{length($siteColors)}n+#{$i}){
-
-    .block-header {
-      background-color: $level-color;
-    }
-
-    blockquote {
-      border-color: black; 
-      margin: 20px -100px 20px 100px;
-      padding: 20px;
-    }
-  }
-}
+// @for $i from 0 to 4 {
+//   $level-color: nth($siteColors, $i + 1);
+//   .pilot:nth-of-type(#{length($siteColors)}n+#{$i}){
+// 
+//     h1 {
+//       background-color: $level-color;
+//     }
+// 
+//     .block-header h1 {
+//       background-color: $level-color;
+//     }
+//   }
+// }
+// 

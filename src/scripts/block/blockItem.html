@@ -13,7 +13,7 @@
 
         <img ng-src="{{block.headerImage.url}}"/>
 
-        <h1>{{block.title | underscorize}}</h1>
+        <h1>{{block.title}}</h1>
 
       </a>
       <a ng-show="block.selected" 
@@ -21,16 +21,43 @@
          ng-click="toggleExpanded()">
         <img ng-src="{{block.headerImage.url}}"/>
 
-        <h1>{{block.title | underscorize}}</h1>
+        <h1>{{block.title}}</h1>
 
       </a>
     </header>
 
-      <article>
+    <ng-switch on="block.layout">
+      <article ng-switch-when="pilot"
+           class="block-content">
         <h1>{{block.title}}</h1>
-        <block-content markdown="block.content" 
-                       class="content col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
-        </block-content>
+        <section class="sidebar hidden-xs col-sm-4 col-lg-2">
+          <nav class="toc">
+            <table class="table">
+              <thead>
+                <th>Contents</th>
+                <tr ng-repeat="block in blocks">
+                  <td><a ng-href="{{block.url}}">{{block.title}}</a></td>
+                </tr>
+              </tr>
+              </thead>
+            </table>
+          </nav>
+
+          <!-- <img src="./images/angeliki&#45;in&#45;action.jpg"></img> -->
+
+        </section>
+
+        <section ng-bind-html="block.content | markdown" 
+                 class="col-xs-12 col-sm-7 col-sm-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
+        </section>
+      </article>
+
+      <article ng-switch-default
+               class="block-content">
+        <h1>{{block.title}}</h1>
+        <section ng-bind-html="block.content | markdown" 
+                 class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
+        </section>
           
 
         <section class="meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2">
@@ -44,6 +71,7 @@
           </table>
         </section>
       </article>
+    </ng-switch>
 
   </div>
 </section>

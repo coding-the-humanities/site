@@ -6,7 +6,8 @@
     return {
       restrict: 'E',
       scope: {
-        block: '='
+        block: '=',
+        blocks: '='
       },
       templateUrl: 'block/blockItem.html',
       controller: 'BlockItemCtrl',
