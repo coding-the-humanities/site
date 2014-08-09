@@ -8,14 +8,17 @@
 
   h1 {
     @include negative-colors;
+    @include adjust-font-size-to(16px);
+    @include padding-leader(0);
+    @include padding-trailer(0);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     user-select: none;
-    font-size: 1.2em;
     position: absolute;
     left: 0px;
-    bottom: 0.7em;
+    bottom: 0.6em;
     margin: 0;
     width: 100%;
-    padding: 0.7em 1em;
     opacity: 0.2;
   }
 
@@ -42,4 +45,25 @@
       opacity: 0.9;
     }
   }
+
+  @media(min-width: $screen-sm-min) {
+    h1 {
+      @include adjust-font-size-to(21px);
+      @include padding-leader(0.5, 21px);
+      @include padding-trailer(0.5, 21px);
+      bottom: 1em;
+    }
+  }
+
+
+  @media(min-width: $screen-lg-min) {
+    h1 {
+      @include adjust-font-size-to(24px);
+      @include padding-leader(0.5, 24px);
+      @include padding-trailer(0.5, 24px);
+      bottom: 2em;
+    } 
+  }
+
+
 }

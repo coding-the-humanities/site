@@ -37,26 +37,4 @@
       }
     }
   }
-
-  @media(min-width: $screen-sm-min) {
-    font-size: 1.1em;
-
-    header h1 {
-      bottom: 1em; 
-    }
-  }
-
-  @media(min-width: $screen-md-min) {
-    font-size: 1.2em;
-    header h1 {
-      bottom: 1.5em; 
-    }
-  }
-
-  @media(min-width: $screen-lg-min) {
-    font-size: 1.3em;
-    header h1 {
-      bottom: 2em; 
-    }
-  }
 }

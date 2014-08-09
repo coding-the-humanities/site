@@ -30,25 +30,25 @@
       <article ng-switch-when="pilot"
            class="block-content">
         <h1>{{block.title}}</h1>
-        <section class="sidebar hidden-xs col-sm-4 col-lg-2">
-          <nav class="toc">
+          <nav class="meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0">
             <table class="table">
-              <thead>
-                <th>Contents</th>
-                <tr ng-repeat="block in blocks">
-                  <td><a ng-href="{{block.url}}">{{block.title}}</a></td>
-                </tr>
+              <tr ng-repeat="block in blocks">
+                <td><a ng-href="{{block.url}}">{{block.title}}</a></td>
               </tr>
-              </thead>
             </table>
           </nav>
 
-          <!-- <img src="./images/angeliki&#45;in&#45;action.jpg"></img> -->
-
+        <section ng-bind-html="block.content | markdown" 
+                 class="main-text col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-5 col-lg-offset-2 csSlideUp">
         </section>
 
-        <section ng-bind-html="block.content | markdown" 
-                 class="col-xs-12 col-sm-7 col-sm-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
+        <section class="sidebar hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-1">
+          <div class="col-lg-10 col-lg-offset-0">
+            <img src="./images/erik-charlie.jpg"></img>
+          </div>
+          <!-- <div class="col&#45;lg&#45;10 col&#45;lg&#45;offset&#45;0"> -->
+          <!--   <img src="./images/angeliki&#45;in&#45;action.jpg"></img> -->
+          <!-- </div> -->
         </section>
       </article>
 

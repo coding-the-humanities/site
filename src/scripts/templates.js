@@ -40,25 +40,25 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "      <article ng-switch-when=\"pilot\"\n" +
     "           class=\"block-content\">\n" +
     "        <h1>{{block.title}}</h1>\n" +
-    "        <section class=\"sidebar hidden-xs col-sm-4 col-lg-2\">\n" +
-    "          <nav class=\"toc\">\n" +
+    "          <nav class=\"meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0\">\n" +
     "            <table class=\"table\">\n" +
-    "              <thead>\n" +
-    "                <th>Contents</th>\n" +
-    "                <tr ng-repeat=\"block in blocks\">\n" +
-    "                  <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
-    "                </tr>\n" +
+    "              <tr ng-repeat=\"block in blocks\">\n" +
+    "                <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
     "              </tr>\n" +
-    "              </thead>\n" +
     "            </table>\n" +
     "          </nav>\n" +
     "\n" +
-    "          <!-- <img src=\"./images/angeliki&#45;in&#45;action.jpg\"></img> -->\n" +
-    "\n" +
+    "        <section ng-bind-html=\"block.content | markdown\" \n" +
+    "                 class=\"main-text col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-5 col-lg-offset-2 csSlideUp\">\n" +
     "        </section>\n" +
     "\n" +
-    "        <section ng-bind-html=\"block.content | markdown\" \n" +
-    "                 class=\"col-xs-12 col-sm-7 col-sm-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "        <section class=\"sidebar hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-1\">\n" +
+    "          <div class=\"col-lg-10 col-lg-offset-0\">\n" +
+    "            <img src=\"./images/erik-charlie.jpg\"></img>\n" +
+    "          </div>\n" +
+    "          <!-- <div class=\"col&#45;lg&#45;10 col&#45;lg&#45;offset&#45;0\"> -->\n" +
+    "          <!--   <img src=\"./images/angeliki&#45;in&#45;action.jpg\"></img> -->\n" +
+    "          <!-- </div> -->\n" +
     "        </section>\n" +
     "      </article>\n" +
     "\n" +

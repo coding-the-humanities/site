@@ -36,48 +36,59 @@
   p {
     @include adjust-font-size-to(14px);
     @include trailer(1);
-
   }
 
-  section > p:last-child {
+  section {
     @include trailer(4);
   }
 
+
   blockquote {
-    padding-left: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
     font-family: 'NittyBold';
-    background-color: $brand-primary;
-    color: white;
+    @include negative-colors;
     @include adjust-font-size-to(16px);
     @include leader(1, 16px);
     @include trailer(1, 16px);
     @include padding-leader(1, 16px);
     @include padding-trailer(1, 16px);
-    border-left: solid black 10px;
+    border-left: solid $colorBlue 6px;
   }
 
   ol {
     font-family: 'NittyBold';
-    background-color: $brand-primary;
-    color: white;
-    padding-left: 4.2em;
+    padding-left: 5.2em;
+    padding-right: 3em;
+    @include negative-colors;
     @include adjust-font-size-to(16px);
     @include padding-leader(1, 16px);
     @include padding-trailer(1, 16px);
     @include leader(1, 16px);
     @include trailer(1, 16px);
     list-style: decimal outside none;
-    border-left: solid black 10px;
+    border-left: solid $colorBlue 6px;
 
     p {
       @include trailer(0);
     }
   }
 
+  img {
+    border: solid black 8px;
+    padding: 0;
+    width: 100%;
+  }
+  .sidebar {
+    img {
+      @include leader(3);
+    }
+  }
+
   a {
     display: inline-block;
     padding: 0.1em 0.4em;
-    @include negative-colors;
+    color: white;
 
     &:hover {
       background-color: $brand-primary;
@@ -86,17 +97,34 @@
     }
   }
 
+  .sidebar {
+    padding: 0;
+  }
+
   .meta {
+    @include leader(3);
     display: block;
     font-family: NittyBold;
-    margin-top: 140px;
-    margin-bottom: 0px;
-    padding: 30px;
+    padding: 20px;
     background-color: black;
     text-align: center;
 
+    table {
+      border-color: $brand-primary;
+    }
+
+
     th, td {
+      @include adjust-font-size-to(12px);
+
       color: white;
+      border-color: $brand-primary;
+    }
+
+    tr:first-child {
+      td {
+        border-top: none;
+      }
     }
   }
   .sidebar {
@@ -106,8 +134,6 @@
   }
 
   .toc {
-
-
     th, td {
       width: 100%;
       @include adjust-font-size-to(10px);
@@ -135,9 +161,6 @@
       @include article-title(40px);
     }
 
-    p {
-      @include adjust-font-size-to(16px);
-    }
 
   }
 
@@ -145,34 +168,33 @@
     h1 {
       @include article-title(50px);
     }
-    blockquote {
-    }
+  }
 
-    p {
-      @include adjust-font-size-to(18px);
-    }
 
-    ol {
-      li {
-        @include adjust-leading-to(2, 16px);
-      }
-    }
-    .toc {
-
+  @media(min-width: $screen-lg-min) {
+    .meta {
       th, td {
         @include adjust-font-size-to(14px);
+        color: white;
+      }
+    }
+    h1 {
+      @include article-title(80px, 3, 3, 2, 2, 4);
+    }
+
+
+    p {
+      @include adjust-font-size-to(24px);
+      @include adjust-leading-to(1.5, 24px);
+    }
+
+    .main-text {
+      img {
+        display: none;
       }
     }
   }
 
-  @media(min-width: $screen-lg-min) {
-    h1 {
-      @include article-title(80px, 3, 2, 2, 2, 2);
-    }
-
-    p {
-      @include adjust-font-size-to(20px);
-    }
-
+  .meta {
   }
 }
