@@ -11,6 +11,13 @@ content: |
   From its inception, the pilot was geared at involving public and private partners to promote the sharing and circulation of both hands-on practices and theoretical knowledge. Throughout the pilot, experts visited
 
   Changed perspectives
+  <div id="test">
+    <canvas width="1280" height="720"></canvas>
+    <video width="1280" height="720" controls>
+      <source src="video/robin.mp4" type="video/mp4"/>
+      <source src="video/robin.webm" type="video/webm"/>
+    </video>
+  </div>
 
   Expectations (aanmeldingen) en evaluatie
 

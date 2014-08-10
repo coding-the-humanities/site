@@ -15,6 +15,12 @@ module.exports =
     src: ["**/*.html", "!scripts/**/*"]
     dest: "dev/"
 
+  video:
+    expand: true
+    cwd: "src"
+    src: ["**/*.{webm,mp4}"]
+    dest: "dev/"
+
   js:
     expand: true
     cwd: "src"
@@ -30,5 +36,5 @@ module.exports =
   dist:
     expand: true
     cwd: "dev"
-    src: ["index.html", "images/**/*", "fonts/**/*", "api/**/*"]
+    src: ["index.html", "video/**/*", "images/**/*", "fonts/**/*", "api/**/*"]
     dest: "dist"
