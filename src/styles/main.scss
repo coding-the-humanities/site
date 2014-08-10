@@ -63,6 +63,10 @@ $round-to-nearest-half-line: true;
 
 
 // html,
+html {
+  height: 100%;
+}
+
 .container-fluid {
   width: 100vw;
   margin: 0;

@@ -91,13 +91,13 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
 angular.module("block/blockList.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("block/blockList.html",
     "<section ui-sref-active=\"active\" \n" +
-    "         class=\"triggered\"\n" +
-    "         class=\"posts\">\n" +
+    "         class=\"blocks\">\n" +
     "\n" +
     "  <block-item ng-repeat=\"block in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
     "             selected=\"{{block.selected}}\"\n" +
     "             block=\"block\" blocks=\"blockList.blocks\">\n" +
     "  </block-item>\n" +
+    "  <div class=\"block empty\"></div>\n" +
     "</section>\n" +
     "");
 }]);

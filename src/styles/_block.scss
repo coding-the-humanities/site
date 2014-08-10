@@ -11,6 +11,8 @@
   margin-bottom: 0px;
   position: relative;
   clear: both;
+  height: auto;
+  background-color: white;
 
   h1, h2, h3 {
     font-family: NittyBold;
@@ -37,4 +39,10 @@
       }
     }
   }
+
+  &.empty {
+    height: 70vh;
+    background-color: black;
+  }
+
 }

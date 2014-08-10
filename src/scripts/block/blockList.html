@@ -1,9 +1,9 @@
 <section ui-sref-active="active" 
-         class="triggered"
-         class="posts">
+         class="blocks">
 
   <block-item ng-repeat="block in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder"
              selected="{{block.selected}}"
              block="block" blocks="blockList.blocks">
   </block-item>
+  <div class="block empty"></div>
 </section>
