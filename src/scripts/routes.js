@@ -31,10 +31,13 @@
         templateUrl: 'block/blockList.html',
         controller: 'BlockCtrl as blockList',
         resolve: {
-          content: ['$http', function($http){
+          content: ['$http', 'stringManipulators' , function($http, stringManipulators){
             return $http.get('/api/pilot.json').then(function(response){
               var blocks = response.data.pilot;
-              blocks = _(blocks).sortBy('order').value();
+              blocks = _(blocks).map(function(block, index){
+                block.id = stringManipulators.dasherize(block.title);
+                return block;
+              }).sortBy('order').value();
               return blocks;
             }); 
           }]

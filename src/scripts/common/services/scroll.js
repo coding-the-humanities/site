@@ -6,7 +6,9 @@
   function scroll(){
     return {
       toTop: function(element){
-        var top = element.position().top;
+        var header = $('.site-header').height() - 100;
+        var top = element.position().top - header;
+        console.log(header);
         $('body').animate({scrollTop: top + 5}, {
           duration: 750,
         });

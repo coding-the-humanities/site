@@ -49,16 +49,16 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "          </nav>\n" +
     "\n" +
     "        <section ng-bind-html=\"block.content | markdown\" \n" +
-    "                 class=\"main-text col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-5 col-lg-offset-2 csSlideUp\">\n" +
+    "                 class=\"main-text col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-5 col-lg-offset-1 csSlideUp\">\n" +
     "        </section>\n" +
     "\n" +
-    "        <section class=\"sidebar hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-1\">\n" +
+    "        <section class=\"sidebar hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1\">\n" +
     "          <div class=\"col-lg-10 col-lg-offset-0\">\n" +
     "            <img src=\"./images/erik-charlie.jpg\"></img>\n" +
     "          </div>\n" +
-    "          <!-- <div class=\"col&#45;lg&#45;10 col&#45;lg&#45;offset&#45;0\"> -->\n" +
-    "          <!--   <img src=\"./images/angeliki&#45;in&#45;action.jpg\"></img> -->\n" +
-    "          <!-- </div> -->\n" +
+    "          <div class=\"col-lg-10 col-lg-offset-0\">\n" +
+    "            <img src=\"./images/angeliki-in-action.jpg\"></img>\n" +
+    "          </div>\n" +
     "        </section>\n" +
     "      </article>\n" +
     "\n" +

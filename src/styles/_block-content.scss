@@ -79,11 +79,6 @@
     padding: 0;
     width: 100%;
   }
-  .sidebar {
-    img {
-      @include leader(3);
-    }
-  }
 
   a {
     display: inline-block;
@@ -118,7 +113,7 @@
       @include adjust-font-size-to(12px);
 
       color: white;
-      border-color: $brand-primary;
+      border-color: white;
     }
 
     tr:first-child {
