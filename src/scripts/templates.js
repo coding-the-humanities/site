@@ -93,7 +93,7 @@ angular.module("block/blockList.html", []).run(["$templateCache", function($temp
     "<section ui-sref-active=\"active\" \n" +
     "         class=\"blocks\">\n" +
     "\n" +
-    "  <block-item ng-repeat=\"block in blockList.blocks | filter:{ tags: app.postFilter }| orderBy:app.postOrder\"\n" +
+    "  <block-item ng-repeat=\"block in blockList.blocks | orderBy:app.postOrder\"\n" +
     "             selected=\"{{block.selected}}\"\n" +
     "             block=\"block\" blocks=\"blockList.blocks\">\n" +
     "  </block-item>\n" +

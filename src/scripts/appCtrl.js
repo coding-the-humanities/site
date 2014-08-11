@@ -6,6 +6,7 @@
     var vm = this;
     vm.showHeader = true;
 
+
     $timeout(function(){
       vm.showHeader = false;
       $timeout(function(){
@@ -14,35 +15,16 @@
     }, 2000);
     
     vm.postOrder = '-posted';
-    vm.postFilter = '';
 
-    vm.tags = [{
-      name: 'About',
-      filter: 'about'
+    vm.routes = [{
+      name: 'posts'
     }, {
-      name: 'Posts', 
-      filter: 'post',
-      active: true
+      name: 'essays',
     }, {
-      name: 'Articles',
-      filter: 'article'
+      name: 'pilot'
     }, {
-      name: 'All',
-      filter: ''
+      name: 'about'
     }];
-
-    vm.setFilter = function(filter){
-      vm.postFilter = filter;
-      _.each(vm.tags, function(tag){
-        tag.active = false;
-        if(tag.filter === filter){
-          tag.active = true;
-        }
-        return tag;
-      });
-      $state.go('posts');
-
-    };
 
     return vm;
   }

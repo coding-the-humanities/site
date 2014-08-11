@@ -17,6 +17,7 @@ module.exports = (grunt) ->
   staging:
     options:
       bucket: 'cth-dev.cc'
+      differential: true
     files: [
       expand: true
       cwd: 'dev'
