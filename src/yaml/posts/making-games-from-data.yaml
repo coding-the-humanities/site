@@ -7,7 +7,7 @@ images:
 - url: ./images/federico.jpg
 - url: ./images/presentation.jpg
 tags: 
-- posts
+- post
 - pilot
 content: |
   "We want to take quantitative data and turn our papers into computer games that convey the theory," sounded the conclusion of the last presentation on last week's Coding the Humanities opening event. 

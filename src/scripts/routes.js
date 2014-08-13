@@ -14,11 +14,16 @@
         templateUrl: 'block/blockList.html',
         controller: 'BlockCtrl as blockList',
         resolve: {
-          content: ['$http', function($http){
-            return $http.get('/api/posts.json').then(function(response){
-              var posts = response.data.blocks;
-              posts = _(posts).sortBy('posted').value().reverse();
-              return posts;
+          content: ['Blocks', 'stringManipulators' , function(Blocks, stringManipulators){
+
+            var params = {
+              url: 'api/posts.json',
+              order: 'posted',
+              filterTag: 'post'
+            };
+
+            return Blocks.getBlocks(params).then(function(blocks){
+              return blocks;
             }); 
           }]
         }
@@ -31,11 +36,16 @@
         templateUrl: 'block/blockList.html',
         controller: 'BlockCtrl as blockList',
         resolve: {
-          content: ['$http', function($http){
-            return $http.get('/api/posts.json').then(function(response){
-              var posts = response.data.blocks;
-              posts = _(posts).sortBy('posted').value().reverse();
-              return posts;
+          content: ['Blocks', 'stringManipulators' , function(Blocks, stringManipulators){
+
+            var params = {
+              url: 'api/posts.json',
+              order: 'posted',
+              filterTag: 'article'
+            };
+
+            return Blocks.getBlocks(params).then(function(blocks){
+              return blocks;
             }); 
           }]
         }
@@ -48,13 +58,14 @@
         templateUrl: 'block/blockList.html',
         controller: 'BlockCtrl as blockList',
         resolve: {
-          content: ['$http', 'stringManipulators' , function($http, stringManipulators){
-            return $http.get('/api/pilot.json').then(function(response){
-              var blocks = response.data.blocks;
-              blocks = _(blocks).map(function(block, index){
-                block.id = stringManipulators.dasherize(block.title);
-                return block;
-              }).sortBy('order').value();
+          content: ['Blocks', 'stringManipulators' , function(Blocks, stringManipulators){
+
+            var params = {
+              url: 'api/pilot.json',
+              order: 'order'
+            };
+
+            return Blocks.getBlocks(params).then(function(blocks){
               return blocks;
             }); 
           }]
@@ -69,11 +80,14 @@
         controller: 'BlockCtrl as blockList',
         resolve: {
           content: ['Blocks', 'stringManipulators' , function(Blocks, stringManipulators){
-            return Blocks.getBlocks('api/pilot.json').then(function(blocks){
-              blocks = _(blocks).map(function(block, index){
-                block.id = stringManipulators.dasherize(block.title);
-                return block;
-              }).sortBy('order').value();
+
+            var params = {
+              url: 'api/posts.json',
+              order: 'order',
+              filterTag: 'about'
+            };
+
+            return Blocks.getBlocks(params).then(function(blocks){
               return blocks;
             }); 
           }]

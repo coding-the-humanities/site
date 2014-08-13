@@ -11,8 +11,8 @@
       vm.showHeader = false;
       $timeout(function(){
         $scope.$broadcast('pageReady');
-      }, 3000);
-    }, 2000);
+      }, 2000);
+    }, 1000);
     
     vm.postOrder = '-posted';
 

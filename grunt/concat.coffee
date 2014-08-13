@@ -50,6 +50,7 @@ module.exports =
       'src/scripts/appCtrl.js'
       'src/scripts/block/BlockCtrl.js'
       'src/scripts/block/Blocks.js'
+      'src/scripts/block/Block.js'
       'src/scripts/block/blockItem.js'
       'src/scripts/block/blockItemCtrl.js'
       'src/scripts/block/blockContent.js'

@@ -7,7 +7,8 @@ images:
 - url: ./images/ashley.jpg
 - url: ./images/nigel.jpg
 tags: 
-- frontpage
+- post
+- pilot
 content: |
   Is it possible to build a viable MVP in 2,5 weeks without any prior programming experience? Yes, it is, the pilot group of Coding the Humanities proved this week.
 
