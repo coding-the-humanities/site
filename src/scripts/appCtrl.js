@@ -13,6 +13,11 @@
         $scope.$broadcast('pageReady');
       }, 2000);
     }, 1000);
+
+    
+    $scope.$on('$stateChangeSuccess', function(){
+      $scope.$broadcast('pageReady');
+    });
     
     vm.postOrder = '-posted';
 

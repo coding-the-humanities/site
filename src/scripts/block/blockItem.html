@@ -43,11 +43,8 @@
         </section>
 
         <section class="sidebar hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1">
-          <div class="col-lg-10 col-lg-offset-0">
-            <img src="./images/erik-charlie.jpg"></img>
-          </div>
-          <div class="col-lg-10 col-lg-offset-0">
-            <img src="./images/angeliki-in-action.jpg"></img>
+          <div ng-repeat="image in block.sideImages" class="col-lg-10 col-lg-offset-0">
+            <img ng-src="{{image.url}}"></img>
           </div>
         </section>
       </article>

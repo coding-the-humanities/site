@@ -8,7 +8,10 @@
       this.title = block.title;
       this.content = block.content;
       this.authors = block.authors;
-      this.headerImage = block.images[0];
+     
+      this.headerImage = _.first(block.images);
+      this.sideImages = _.rest(block.images);
+
       this.tags = block.tags;
 
       this.posted = new Date(block.posted);

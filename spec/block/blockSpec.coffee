@@ -7,6 +7,10 @@ describe 'Block Factory', ->
     posted: '2014-01-01'
     images: [
       url: 'images/test.jpg'
+    ,
+      url: 'images/test2.jpg'
+    ,
+      url: 'images/test3.jpg'
     ]
     authors: [
       "one"
@@ -46,6 +50,9 @@ describe 'Block Factory', ->
 
     it 'has an header image', ->
       expect(@block.headerImage.url).toBe('images/test.jpg')
+
+    it 'has two side images', ->
+      expect(@block.sideImages.length).toBe(2)
       
     it 'has a default layout property', ->
       expect(@block.layout).toBe('default')

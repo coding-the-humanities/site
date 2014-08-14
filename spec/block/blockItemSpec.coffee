@@ -44,7 +44,7 @@ describe 'blockItem directive', ->
 
   describe 'expand item', ->
     beforeEach ->
-      @$httpBackend.expectGET('/api/posts.json').respond('{}')
+      @$httpBackend.expectGET('api/posts.json').respond('{}')
 
     it 'toggles its expanded class', ->
       expect(@element.hasClass('expanded')).toBe(false)
@@ -54,7 +54,7 @@ describe 'blockItem directive', ->
 
   describe 'selected item', ->
     beforeEach ->
-      @$httpBackend.expectGET('/api/posts.json').respond('{}')
+      @$httpBackend.expectGET('api/posts.json').respond('{}')
       @$scope.block.selected = true
       @$scope.$digest()
 

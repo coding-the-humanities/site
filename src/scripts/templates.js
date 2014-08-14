@@ -53,11 +53,8 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "        </section>\n" +
     "\n" +
     "        <section class=\"sidebar hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1\">\n" +
-    "          <div class=\"col-lg-10 col-lg-offset-0\">\n" +
-    "            <img src=\"./images/erik-charlie.jpg\"></img>\n" +
-    "          </div>\n" +
-    "          <div class=\"col-lg-10 col-lg-offset-0\">\n" +
-    "            <img src=\"./images/angeliki-in-action.jpg\"></img>\n" +
+    "          <div ng-repeat=\"image in block.sideImages\" class=\"col-lg-10 col-lg-offset-0\">\n" +
+    "            <img ng-src=\"{{image.url}}\"></img>\n" +
     "          </div>\n" +
     "        </section>\n" +
     "      </article>\n" +
