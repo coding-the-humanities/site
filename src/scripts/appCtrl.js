@@ -9,6 +9,7 @@
 
     $timeout(function(){
       vm.showHeader = false;
+      selectActiveRoute();
       $timeout(function(){
         $scope.$broadcast('pageReady');
       }, 2000);
@@ -16,6 +17,7 @@
 
     
     $scope.$on('$stateChangeSuccess', function(){
+      selectActiveRoute();
       $scope.$broadcast('pageReady');
     });
     
@@ -32,5 +34,14 @@
     }];
 
     return vm;
+
+    function selectActiveRoute(){
+      vm.routes.map(function(route){
+        route.active = false;
+        if($state.includes(route.name)){
+          route.active = true;
+        }
+      });
+    }
   }
 })();

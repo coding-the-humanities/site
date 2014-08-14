@@ -39,7 +39,7 @@
             <ul class="nav navbar-nav">
 
               <li ng-repeat="route in app.routes" 
-                  ui-sref-active="active">
+                  ng-class="{active: route.active}">
                   <a ui-sref="{{route.name}}">{{route.name | uppercase}}</a>
               </li>
             </ul>
