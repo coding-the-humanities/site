@@ -59,3 +59,5 @@ describe 'Block Factory', ->
 
     it 'has a default order property', ->
       expect(@block.order).toBe('n/a')
+
+  null

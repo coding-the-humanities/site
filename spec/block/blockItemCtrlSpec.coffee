@@ -56,7 +56,7 @@ describe 'BlockItemCtrl', ->
           @$state.current.name = 'posts'
           BlockItemCtrl = @controllerConstructor 'BlockItemCtrl',
             $scope: @scope
-            $state: @$state 
+            $state: @$state
             stringManipulators: stringManipulators
 
           @block = BlockItemCtrl.block
@@ -84,9 +84,9 @@ describe 'BlockItemCtrl', ->
       @scope.toggleExpanded()
       expect(@block.expanded).toBe(false)
 
-  stringManipulators =
-    dasherize: (string) ->
-      return 'hello-world'
+stringManipulators =
+  dasherize: (string) ->
+    return 'hello-world'
 
-  scroll =
-    toTop: (element) ->
+scroll =
+  toTop: (element) ->

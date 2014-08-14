@@ -7,7 +7,6 @@
 
     $locationProvider.html5Mode(true);
 
-
     $stateProvider
       .state('posts', {
         url: '/posts',
@@ -23,7 +22,7 @@
             };
 
             return Blocks.getBlocks(params).then(function(blocks){
-              return blocks;
+              return blocks.reverse();
             }); 
           }]
         }
