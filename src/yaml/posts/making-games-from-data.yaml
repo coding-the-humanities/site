@@ -5,7 +5,8 @@ authors:
 - Sabrina Sauer
 images:
 - url: ./images/federico.jpg
-- url: ./images/presentation.jpg
+- url: ./images/presentation-cameron.jpg
+- url: ./images/nigel.jpg
 tags: 
 - post
 - pilot
@@ -18,6 +19,8 @@ content: |
 
   During the first half of the week, Marijn, Jan Hein and Alexandro Mancusi from [Weyeser](http://weyeser.com/) gave introductions to API's, data sets, user stories, Json, Rest, Git and Firebase after which the students explored the tools themselves. 
 
+  ![Cameron](./images/presentation-cameron.jpg)
+
   On Thursday, after a few days of technological immersion, Federico Bonelli of [Trasformatorio](http://www.trasformatorio.net/) reintroduced theory into data science and presented his work and ideas on interdisciplinary, truth and poetic terrorism. He showed how data can be translated and transformed into different guises. 
 
   ## Presenting Complex Issues
@@ -29,5 +32,7 @@ content: |
   ## Pitching your Ideas
 
   Friday started with an impromptu lecture in project management by [Nigel Hamlin](http://nl.linkedin.com/in/nigelhamlin). We worked on practical project management skills and worked on preparing a five minute pitch for the project. Next week, we'll film the pitch and make it available on the website.
+
+  ![Nigel](./images/nigel.jpg)
 
   We ended the week with a pair programming session after which the students were invited to do some live coding. And this amazing week ended even better with the amazing Dutch victory at their first World Cup game!

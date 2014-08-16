@@ -1,9 +1,9 @@
 (function(){
   'use strict';
 
-  angular.module('cth').factory('scroll', [scroll]);
+  angular.module('cth').factory('scroll', ['$timeout', scroll]);
 
-  function scroll(){
+  function scroll($timeout){
     return {
       toTop: function(element){
         var header = $('.site-header').height() - 100;
