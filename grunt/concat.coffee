@@ -56,6 +56,7 @@ module.exports =
       'src/scripts/block/blockContent.js'
       'src/scripts/block/blockContentCtrl.js'
       'src/scripts/profile/profilesCtrl.js'
+      'src/scripts/presentation/PresentationCtrl.js'
       'src/scripts/common/directives/disable-ng-animate.js'
       'src/scripts/common/services/scroll.js'
       'src/scripts/common/services/string-manipulators.js'

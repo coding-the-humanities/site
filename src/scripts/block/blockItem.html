@@ -27,6 +27,18 @@
     </header>
 
     <ng-switch on="block.layout">
+      <article ng-switch-when="presentation"
+               ng-controller="PresentationCtrl as presentation"
+               class="block-content">
+
+        <carousel>
+          <slide ng-repeat="slide in presentation.slides" active="slide.active">
+            <h1>{{slide.title}}</h1>
+          </slide> 
+        </carousel>
+
+      </article>
+
       <article ng-switch-when="pilot"
            class="block-content">
         <h1>{{block.title}}</h1>

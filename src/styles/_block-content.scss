@@ -24,6 +24,16 @@
   border-left: solid $colorBlue 8px;
 }
 
+.presentation {
+  .block-content {
+    height: 100vh;
+
+    .item {
+      height: 80vh;
+    }
+  }
+}
+
 .block-content {
   display: none;
 
@@ -69,23 +79,24 @@
     }
   }
 
-  #test {
-    position: relative;
-  }
-  video, canvas {
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    padding: 0;
-    border: solid black 8px;
-  }
+  // #test {
+  //   position: relative;
+  // }
 
-  video {
-    height: 100%;
-    position: absolute;
-  }
+  // video, canvas {
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   max-width: 100%;
+  //   height: auto;
+  //   padding: 0;
+  //   border: solid black 8px;
+  // }
+
+  // video {
+  //   height: 100%;
+  //   position: absolute;
+  // }
 
   img {
     padding: 0;

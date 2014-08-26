@@ -37,6 +37,18 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "    </header>\n" +
     "\n" +
     "    <ng-switch on=\"block.layout\">\n" +
+    "      <article ng-switch-when=\"presentation\"\n" +
+    "               ng-controller=\"PresentationCtrl as presentation\"\n" +
+    "               class=\"block-content\">\n" +
+    "\n" +
+    "        <carousel>\n" +
+    "          <slide ng-repeat=\"slide in presentation.slides\" active=\"slide.active\">\n" +
+    "            <h1>{{slide.title}}</h1>\n" +
+    "          </slide> \n" +
+    "        </carousel>\n" +
+    "\n" +
+    "      </article>\n" +
+    "\n" +
     "      <article ng-switch-when=\"pilot\"\n" +
     "           class=\"block-content\">\n" +
     "        <h1>{{block.title}}</h1>\n" +
