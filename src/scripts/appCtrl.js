@@ -16,7 +16,7 @@
       $timeout(function(){
         $scope.$broadcast('pageReady');
       }, 2000);
-    }, 1000);
+    }, 1500);
     
     $scope.$on('$stateChangeSuccess', function(event, toState){
       selectActiveRoute(toState.name);

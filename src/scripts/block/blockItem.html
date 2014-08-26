@@ -29,20 +29,22 @@
     <ng-switch on="block.layout">
       <article ng-switch-when="pilot"
            class="block-content">
+
         <h1>{{block.title}}</h1>
-          <nav class="meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0">
-            <table class="table">
-              <tr ng-repeat="block in blocks">
-                <td><a ng-href="{{block.url}}">{{block.title}}</a></td>
-              </tr>
-            </table>
-          </nav>
+
+        <nav class="meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0">
+          <table class="table">
+            <tr ng-repeat="block in blocks">
+              <td><a ng-href="{{block.url}}">{{block.title}}</a></td>
+            </tr>
+          </table>
+        </nav>
 
         <section ng-bind-html="block.content | markdown" 
                  class="main-text col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-5 col-lg-offset-1 csSlideUp">
         </section>
 
-        <section class="sidebar hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1">
+        <section class="sidebar right hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1">
           <div ng-repeat="image in block.sideImages" class="col-lg-10 col-lg-offset-0">
             <img ng-src="{{image.url}}"></img>
           </div>
@@ -52,12 +54,19 @@
       <article ng-switch-default
                class="block-content">
         <h1>{{block.title}}</h1>
+
+        <section class="sidebar left hidden-xs hidden-sm hidden-md col-lg-3">
+          <div ng-repeat="image in block.sideImages" class="col-lg-8 col-lg-offset-1">
+            <img ng-src="{{image.url}}"></img>
+          </div>
+        </section>
+
         <section ng-bind-html="block.content | markdown" 
-                 class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp">
+                 class="main-text col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-0 csSlideUp">
         </section>
           
 
-        <section class="meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2">
+        <section class="meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
           <table class="table">
             <thead>
               <th>Meta</th>

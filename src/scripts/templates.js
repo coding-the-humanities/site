@@ -39,20 +39,22 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "    <ng-switch on=\"block.layout\">\n" +
     "      <article ng-switch-when=\"pilot\"\n" +
     "           class=\"block-content\">\n" +
+    "\n" +
     "        <h1>{{block.title}}</h1>\n" +
-    "          <nav class=\"meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0\">\n" +
-    "            <table class=\"table\">\n" +
-    "              <tr ng-repeat=\"block in blocks\">\n" +
-    "                <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
-    "              </tr>\n" +
-    "            </table>\n" +
-    "          </nav>\n" +
+    "\n" +
+    "        <nav class=\"meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0\">\n" +
+    "          <table class=\"table\">\n" +
+    "            <tr ng-repeat=\"block in blocks\">\n" +
+    "              <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
+    "            </tr>\n" +
+    "          </table>\n" +
+    "        </nav>\n" +
     "\n" +
     "        <section ng-bind-html=\"block.content | markdown\" \n" +
     "                 class=\"main-text col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-5 col-lg-offset-1 csSlideUp\">\n" +
     "        </section>\n" +
     "\n" +
-    "        <section class=\"sidebar hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1\">\n" +
+    "        <section class=\"sidebar right hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1\">\n" +
     "          <div ng-repeat=\"image in block.sideImages\" class=\"col-lg-10 col-lg-offset-0\">\n" +
     "            <img ng-src=\"{{image.url}}\"></img>\n" +
     "          </div>\n" +
@@ -62,12 +64,19 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "      <article ng-switch-default\n" +
     "               class=\"block-content\">\n" +
     "        <h1>{{block.title}}</h1>\n" +
+    "\n" +
+    "        <section class=\"sidebar left hidden-xs hidden-sm hidden-md col-lg-3\">\n" +
+    "          <div ng-repeat=\"image in block.sideImages\" class=\"col-lg-8 col-lg-offset-1\">\n" +
+    "            <img ng-src=\"{{image.url}}\"></img>\n" +
+    "          </div>\n" +
+    "        </section>\n" +
+    "\n" +
     "        <section ng-bind-html=\"block.content | markdown\" \n" +
-    "                 class=\"col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-2 csSlideUp\">\n" +
+    "                 class=\"main-text col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-6 col-lg-offset-0 csSlideUp\">\n" +
     "        </section>\n" +
     "          \n" +
     "\n" +
-    "        <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
+    "        <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1\">\n" +
     "          <table class=\"table\">\n" +
     "            <thead>\n" +
     "              <th>Meta</th>\n" +
