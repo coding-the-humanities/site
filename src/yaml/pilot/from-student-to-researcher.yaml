@@ -9,12 +9,15 @@ tags:
 - pilot
 - documentation
 content: |
+  One of the goals of the pilot was the empowerment of the humanities students to become confident researchers who can build their own digital tools. Building their own tools allows students to investigate and question the content and boundaries of data sets, and learn about different markup and programming languages such as HTML, CSS, JavaScript, Polymer, how to create webcomponents, and how to share their work using git. 
+
+  This sharing of code was essential to create their House Mouse Project ... add link to House Mouse Project post ... . In the set-up of the pilot, the students were treated as team members. They worked in small groups on their part of the project, aided by the instructors who engaged the group in pair programming sessions, and set weekly deadlines to complete parts of the project or present the research-in-the-making to visitors and experts during weekly evening events.
+
+   > “[...] Jan Hein en Marijn did a pair programming session. They live coded a little project as an example. It was great to see how fast they were able to make something work on the screen. It was great fun and I learned a lot from it.”
+
   The course facilitated the development of custom tools rather than using ready-made ones that improve the actual practice of humanities research as well as (the quantity and quality) of its output. This is especially relevant, keeping in mind the ever-growing demand in the public and private sector for academics who can read and write code.
 
-  > “I learned that I really like the humanities.”
+   > “I learned that I really like the humanities.”
+  
 
-  One of the goals of the pilot was the empowerment of the humanities students to become confident researchers who can build their own digital tools. Building their own tools allowed students to investigate and question the content and boundaries of data sets, and learn about the language of programming through actual programming: about HTML, CSS, JavaScript, Polymer, how to create webcomponents, and how to share their work using git. 
-
-  > “[...] Jan Hein en Marijn did a pair programming session. They live coded a little project as an example. It was great to see how fast they were able to make something work on the screen. It was great fun and I learned a lot from it.”
-
-  This sharing of code was essential to create their House Mouse Project ... add link to House Mouse Project post ... . In the set-up of the pilot, the students were treated as team members. They worked in small groups on their part of the project, aided by the instructors who for example engaged the group in pair programming sessions, and set weekly deadlines to complete parts of the project or present the research-in-the-making to visitors and experts during weekly evening events.
+ 
