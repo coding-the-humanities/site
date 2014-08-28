@@ -1,0 +1,30 @@
+title: About our Projects
+posted: 2012-06-24 21:57:27 
+order: 4
+layout: pilot
+authors:
+- Jan Hein Hoogstad
+- Sabrina Sauer
+images:
+- url: ./images/launch-event.jpg
+tags:
+- about
+- documentation
+content: |
+  Through collaboration and partnerships, Coding the Humanities is involved in a wide variety of projects. Here's an overview:
+
+    **The Crash Course** offered by The Centre for Digital Humanities is a one-week course to bridge the gap between humanities scholars who have and those who haven't acquired the latest digital tools. The crash course offers an overview on state-of-the art digital tools for textual, historical, visual, and other humanities research. The course includes demonstration and explanation of tools, small assignments to get hands-on experience, and also offers ample space for critical discussion on the surplus and shortcomings of digital humanities.
+
+    **Beyond the Book** addresses globalisation in literature and the international appeal of novels. Some novels are translated in many different languages and published in numerous countries, while others are only available in their original language and reach a small national market. The aim of this project is to develop digital tools with which textual features can be identified that contribute to a novel's international appeal. 
+
+    **Legal Structures** is a part of the Digging Into Data Challenge, where tools are developed to automatically extract and analyse the structure of references between articles in national constitutions and civil codes. The goal is to derive a family tree of the legal systems across the world and find relationships between the way a nation's legal systems are structured and it's cultural, economic and political situation.
+
+    **Social Book Search** is a long-term project investigating how book search engines and recommendation systems can be improved by interpreting what readers write about the books they have read. Online reviews and discussions are rich sources of information that can help people decide whether they want to read a book or not. Book search systems are developed that try to understand which aspects of a book a searcher cares about. 
+
+    **Beyond the Map** is an exploration of the social and narrative acts and performances that underlay all assemblage, but with a particular focus on maps, to begin to expose the territory of its knowledge production, performance and use. Challenging this defining technology of colonialism and imperialism, this project brings together scholars and activists working on topics ranging from critical cartographies of borders and migration, to those promoting alternative and indigenous mapping practices.
+
+  **Creating Collaborative Catalogues**, funded by the National Science Foundation in the US, is project is a long-term collaboration between the UvA, the A:shiwi A:wan Museum & Heritage Center, Zuni, New Mexico, the University of California Los Angeles and eight major US museums. The goal is to create meaningful dialogues and symmetries between different knowledge communities around digital patrimony.
+
+  **Indigenous Knowledge in the Contact Zone** is a collaborative project between UvA, Yunggorendi, First Nations Centre for Higher Education and Research at Flinders University, Australia, and the University of South Australia. Funded by the Australian Research Council Discovery Grants, the project seeks to redefine the authority of indigenous knowledge in the academy and seek strategies for empowerment of indigenous knowledge holders.
+
+  **Augmenting Masterpieces** is a collaborative project between the University of Amsterdam and The Rijksmuseum. It uses a human centred approach to link digital interfaces to the physical museum visit. It's aim is to map the connections between the physical and the digital collection of The Rijksmuseum Amsterdam, and to theoretically and practically investigate interfaces and features for visitors, which could be used in the museum. 
