@@ -37,6 +37,29 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "    </header>\n" +
     "\n" +
     "    <ng-switch on=\"block.layout\">\n" +
+    "\n" +
+    "      <article ng-switch-when=\"profiles\"\n" +
+    "           class=\"block-content\">\n" +
+    "\n" +
+    "        <h1>{{block.title}}</h1>\n" +
+    "\n" +
+    "        <nav class=\"meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0\">\n" +
+    "          <table class=\"table\">\n" +
+    "            <tr ng-repeat=\"block in blocks\">\n" +
+    "              <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
+    "            </tr>\n" +
+    "          </table>\n" +
+    "        </nav>\n" +
+    "\n" +
+    "        <section class=\"profiles col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-1 csSlideUp\">\n" +
+    "          <section class=\"profile col-xs-12 col-lg-6\" ng-repeat=\"person in block.people\">\n" +
+    "            <img ng-src=\"{{person.picture.url}}\"></img>\n" +
+    "            <div ng-bind-html=\"person.profile | markdown\"></div>\n" +
+    "          </section>\n" +
+    "        </section>\n" +
+    "\n" +
+    "      </article>\n" +
+    "\n" +
     "      <article ng-switch-when=\"pilot\"\n" +
     "           class=\"block-content\">\n" +
     "\n" +

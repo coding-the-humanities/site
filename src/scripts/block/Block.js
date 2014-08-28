@@ -18,6 +18,7 @@
       this.id = stringManipulators.dasherize(block.title);
       this.layout = block.layout || 'default';
       this.order = block.order || 'n/a';
+      this.people = block.people || 'n/a';
     };
 
     return content;

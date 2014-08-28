@@ -27,6 +27,29 @@
     </header>
 
     <ng-switch on="block.layout">
+
+      <article ng-switch-when="profiles"
+           class="block-content">
+
+        <h1>{{block.title}}</h1>
+
+        <nav class="meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0">
+          <table class="table">
+            <tr ng-repeat="block in blocks">
+              <td><a ng-href="{{block.url}}">{{block.title}}</a></td>
+            </tr>
+          </table>
+        </nav>
+
+        <section class="profiles col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-1 csSlideUp">
+          <section class="profile col-xs-12 col-lg-6" ng-repeat="person in block.people">
+            <img ng-src="{{person.picture.url}}"></img>
+            <div ng-bind-html="person.profile | markdown"></div>
+          </section>
+        </section>
+
+      </article>
+
       <article ng-switch-when="pilot"
            class="block-content">
 

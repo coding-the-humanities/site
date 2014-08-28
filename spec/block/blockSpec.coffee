@@ -60,4 +60,7 @@ describe 'Block Factory', ->
     it 'has a default order property', ->
       expect(@block.order).toBe('n/a')
 
+    it 'has a default people property', ->
+      expect(@block.people).toBe('n/a')
+
   null

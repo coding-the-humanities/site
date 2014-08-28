@@ -57,6 +57,9 @@
       return it('has a default order property', function() {
         return expect(this.block.order).toBe('n/a');
       });
+      return it('has a default people property', function() {
+        return expect(this.people.order).toBe('na');
+      });
     });
     return null;
   });
