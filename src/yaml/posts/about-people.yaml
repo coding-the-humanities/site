@@ -6,13 +6,12 @@ authors:
 - Jan Hein Hoogstad
 - Sabrina Sauer
 images:
-- url: ./images/launch-event.jpg
+- url: ./images/people.jpg
 tags:
 - people
 - about
 - documentation
 people:
-
 - picture: 
     url: "./images/people/yeehaa.jpg"
   profile: |

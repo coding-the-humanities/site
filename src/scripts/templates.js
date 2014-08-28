@@ -43,16 +43,16 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "\n" +
     "        <h1>{{block.title}}</h1>\n" +
     "\n" +
-    "        <nav class=\"meta hidden-xs col-sm-3 col-sm-offset-0 col-lg-2 col-lg-offset-0\">\n" +
-    "          <table class=\"table\">\n" +
-    "            <tr ng-repeat=\"block in blocks\">\n" +
-    "              <td><a ng-href=\"{{block.url}}\">{{block.title}}</a></td>\n" +
-    "            </tr>\n" +
-    "          </table>\n" +
-    "        </nav>\n" +
+    "        <!-- <nav class=\"meta hidden&#45;xs col&#45;sm&#45;3 col&#45;sm&#45;offset&#45;0 col&#45;lg&#45;2 col&#45;lg&#45;offset&#45;0\"> -->\n" +
+    "        <!--   <table class=\"table\"> -->\n" +
+    "        <!--     <tr ng&#45;repeat=\"block in blocks\"> -->\n" +
+    "        <!--       <td><a ng&#45;href=\"{{block.url}}\">{{block.title}}</a></td> -->\n" +
+    "        <!--     </tr> -->\n" +
+    "        <!--   </table> -->\n" +
+    "        <!-- </nav> -->\n" +
     "\n" +
-    "        <section class=\"profiles col-xs-12 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-1 csSlideUp\">\n" +
-    "          <section class=\"profile col-xs-12 col-lg-6\" ng-repeat=\"person in block.people\">\n" +
+    "        <section class=\"col-xs-10 col-xs-offset-1 csSlideUp\">\n" +
+    "          <section class=\"profile col-xs-12 col-sm-6 col-lg-4\" ng-repeat=\"person in block.people\">\n" +
     "            <img ng-src=\"{{person.picture.url}}\"></img>\n" +
     "            <div ng-bind-html=\"person.profile | markdown\"></div>\n" +
     "          </section>\n" +
@@ -78,7 +78,7 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "        </section>\n" +
     "\n" +
     "        <section class=\"sidebar right hidden-xs hidden-sm hidden-md col-lg-3 col-lg-offset-1\">\n" +
-    "          <div ng-repeat=\"image in block.sideImages\" class=\"col-lg-10 col-lg-offset-0\">\n" +
+    "          <div ng-repeat=\"image in block.sideImages\" class=\"side-image col-lg-10 col-lg-offset-0\">\n" +
     "            <img ng-src=\"{{image.url}}\"></img>\n" +
     "          </div>\n" +
     "        </section>\n" +
@@ -89,7 +89,7 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "        <h1>{{block.title}}</h1>\n" +
     "\n" +
     "        <section class=\"sidebar left hidden-xs hidden-sm hidden-md col-lg-3\">\n" +
-    "          <div ng-repeat=\"image in block.sideImages\" class=\"col-lg-8 col-lg-offset-1\">\n" +
+    "          <div ng-repeat=\"image in block.sideImages\" class=\"side-image col-lg-8 col-lg-offset-1\">\n" +
     "            <img ng-src=\"{{image.url}}\"></img>\n" +
     "          </div>\n" +
     "        </section>\n" +

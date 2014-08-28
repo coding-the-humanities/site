@@ -44,7 +44,7 @@
             };
 
             return Blocks.getBlocks(params).then(function(blocks){
-              return blocks;
+              return blocks.reverse();
             }); 
           }]
         }
