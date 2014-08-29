@@ -25,12 +25,12 @@ content: |
 
   In literary criticism, ever since William Epson published his *Seven Types of Ambiguity* in 1930, ambiguity is considered a poetic device. If used properly, ambiguity adds to the complexity of the text as well as the experience of the reader. Poetry and literature turn ambiguity into a sign of quality rather than an flaw, as it was and is still often regarded in human communication.
 
-  In programming languages, as in human language, ambiguity appears as something that should be avoided–a typo or simply omitting a semi-colon at the end of a sentence quickly results in an error message. It seems that if you want a software program to run properly, everything to the tiniest detail has to be in control. However, second look at programming languages reveals that ambiguity is inherent in programming languages as in human language. While the so-called [diamond problem](http://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem), causes programmers to seek ways to solve or avoid its ambiguity, game programmers are utterly comfortable with evoking spaces where ambiguity runs rampant.  
+  In programming languages, as in human language, ambiguity appears as something that should be avoided–a typo or simply omitting a semi-colon at the end of a sentence quickly results in an error message. It seems that if you want a software program to run properly, everything to the tiniest detail has to be in control. However, second look at programming languages reveals that ambiguity is inherent in programming languages as in human language. While the so-called [diamond problem](http://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem) causes programmers to seek ways to solve or avoid its ambiguity, game programmers are utterly comfortable with evoking spaces where ambiguity runs rampant.  
 
   Where computer programs become more and more complex and try to build increasingly complex forms of artificial intelligence, ambiguity seems to be more and more a prerequisite rather than an inconvenience. Human communication, despite how much we’d want it to, is never free of ambiguity. As literature has taught us, this is its beauty rather than fault. Subsequently, for a program to approach humanness as closely as possible, it has to embrace ambiguity and embrace its possibilities.
 
-  ### To a Shared Language
-  Allowing for ambiguity, however, entails opening up your artificial universe for unexpectedness, uncertainty and the potential of failure. Or as Nishant writes, this act diminishes the amount of control we can exert over these worlds:
+  ## To a Shared Language
+  Allowing for ambiguity, however, entails opening up your artificial universe for unexpectedness, uncertainty and the potential of failure. Or as Nishant Kothary writes, this act diminishes the amount of control we can exert over these worlds:
 
   >A software program is really a rudimentary representation of reality with many axes of complexity reduced or entirely collapsed. The ability of programming languages to cut through ambiguity is actually a symptom of our own rudimentary understanding of the universe. We think that the ability of programming languages to eliminate ambiguity is a desirable feature (rather than a bug) because as humans we need to tell ourselves that we have some control of our environment.
 
@@ -40,4 +40,4 @@ content: |
 
   &mdash; Charlotte van Oostrum ([@cevoostrum](https://www.linkedin.com/in/cevoostrum))
 
-  *With thanks to Nishant "[@Rainypixels](http://rainypixels.com/)" Kothary, for filling in the gaps in my knowledge of programming languages and being an inspiring and insighful writing partner*
+  *With thanks to Nishant "[@rainypixels](http://rainypixels.com/)" Kothary, for filling in the gaps in my knowledge of programming languages and being an inspiring and insighful writing partner*
