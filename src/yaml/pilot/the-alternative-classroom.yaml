@@ -4,7 +4,6 @@ order: 2
 layout: pilot
 images:
 - url: ./images/the-alternative-classroom.jpg
-- url: ./images/blurred-lines.jpg
 tags:
 - pilot
 - documentation
