@@ -42,7 +42,7 @@
         <!-- </nav> -->
 
         <section class="col-xs-10 col-xs-offset-1 csSlideUp">
-          <section class="profile col-xs-12 col-sm-6 col-lg-4" ng-repeat="person in block.people">
+          <section class="profile col-xs-12 col-sm-6 col-lg-4 clearfix" ng-repeat="person in block.people">
             <img ng-src="{{person.picture.url}}"></img>
             <div ng-bind-html="person.profile | markdown"></div>
           </section>

@@ -52,7 +52,7 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "        <!-- </nav> -->\n" +
     "\n" +
     "        <section class=\"col-xs-10 col-xs-offset-1 csSlideUp\">\n" +
-    "          <section class=\"profile col-xs-12 col-sm-6 col-lg-4\" ng-repeat=\"person in block.people\">\n" +
+    "          <section class=\"profile col-xs-12 col-sm-6 col-lg-4 clearfix\" ng-repeat=\"person in block.people\">\n" +
     "            <img ng-src=\"{{person.picture.url}}\"></img>\n" +
     "            <div ng-bind-html=\"person.profile | markdown\"></div>\n" +
     "          </section>\n" +
