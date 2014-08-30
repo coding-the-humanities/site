@@ -78,6 +78,27 @@
         </section>
       </article>
 
+      <article ng-switch-when="imageless"
+               class="block-content">
+        <h1>{{block.title}}</h1>
+
+        <section ng-bind-html="block.content | markdown" 
+                 class="main-text col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-7 col-lg-offset-1 csSlideUp">
+        </section>
+          
+
+        <section class="meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2">
+          <table class="table">
+            <thead>
+              <th>Meta</th>
+            </thead>
+            <tr ng-repeat="author in block.authors">
+              <td>{{author}}</td>
+            </tr>
+          </table>
+        </section>
+      </article>
+
       <article ng-switch-default
                class="block-content">
         <h1>{{block.title}}</h1>

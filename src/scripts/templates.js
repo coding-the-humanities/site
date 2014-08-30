@@ -88,6 +88,27 @@ angular.module("block/blockItem.html", []).run(["$templateCache", function($temp
     "        </section>\n" +
     "      </article>\n" +
     "\n" +
+    "      <article ng-switch-when=\"imageless\"\n" +
+    "               class=\"block-content\">\n" +
+    "        <h1>{{block.title}}</h1>\n" +
+    "\n" +
+    "        <section ng-bind-html=\"block.content | markdown\" \n" +
+    "                 class=\"main-text col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-7 col-lg-offset-1 csSlideUp\">\n" +
+    "        </section>\n" +
+    "          \n" +
+    "\n" +
+    "        <section class=\"meta col-xs-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-2\">\n" +
+    "          <table class=\"table\">\n" +
+    "            <thead>\n" +
+    "              <th>Meta</th>\n" +
+    "            </thead>\n" +
+    "            <tr ng-repeat=\"author in block.authors\">\n" +
+    "              <td>{{author}}</td>\n" +
+    "            </tr>\n" +
+    "          </table>\n" +
+    "        </section>\n" +
+    "      </article>\n" +
+    "\n" +
     "      <article ng-switch-default\n" +
     "               class=\"block-content\">\n" +
     "        <h1>{{block.title}}</h1>\n" +
