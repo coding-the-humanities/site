@@ -1,0 +1,21 @@
+{
+  "title": "Meteor",
+  "posted": "2014-10-20T00:00:00.000Z",
+  "authors": [
+    "Roel Bakkum"
+  ],
+  "images": [
+    {
+      "url": "./images/crater.jpg"
+    },
+    {
+      "url": "./images/caved-in.png"
+    }
+  ],
+  "tags": [
+    "post",
+    "internship",
+    "document"
+  ],
+  "content": "\nI am failing so hard I'm starting to think I never read a line of code in my\nlife. I spend countless hours staring at the tiny screen of an ambiguously\nworking dell netbook with a [glittery digimon\nsticker](http://collectingstickers.blogspot.nl/2014/10/digimon-glitter-tk-stickers.html)\nand a fairy on the back. Okay, not countless hours, but what do you expect\nfrom me? Do I need to retrace my steps and count how many of them I spend in\na state of either futile frustration or frustrated futility? Maybe somebody\nshould explain it to me reaaaaally slowly, as if talking to a 3 year old.\nJust kidding, but I really need a recap in clear language. I'm talking\ncrystal here. \n\n## I Want to Do some Stuff with the Github API!\n\nI mean, of course I was paying attention when our bearded teacher, [Jan Hein](http://beta.codingthehumanities.com/about/about-the-people), explained it to us, though I must admit my attention span was slightly limited. It's not my fault! There was a monster in my bed! (Fair enough, I know the monster, she's really nice and we're on more than speaking terms, but my nocturnal slumber was nevertheless rather short.)\n\nDespite my apparent inability to grasp it: Meteor is nice. I like it as far as my experience permits me to like it, since I haven't worked with it that much. It's got a bunch of cool features like the npmRequire() function with which you can just go like “Hey, Meteor, I want to do some stuff with the Github API,” and Meteor goes like “Yeah, no problemo, Geronimo,” and it just gets the stuff. \n\n## Some Nifty Fourth Level Stuff\n\nOf course you have to work the finer magic yourself, even when you're an incompetent sorcerer like me, but that's what programming is all about. The names of the build-in functions are also pretty forward, though the documentation leaves me slightly dazzled. [Meteor](https://www.meteor.com/) has stuff like findOne(), which (unsurprisingly) finds one instance of a certain thing in another object for you, and insert(), which (equally unsurprisingly) inserts a thing into an object. Also, things like Meteor.call make it sound like you're some kind of wizard casting epic spells, among the lines of “I cast Meteor Call, the troll takes 4d6 fire damage!”. That's some nifty fourth level stuff, I tell you.\n\n## Smokey the Salmon \n\nNext to Meteor being a new thing, our bearded sensei also asked our tiny group to make a Twitter account in case we don't have that yet. Now I, for one, welcome this request of our with equal parts of disgruntlement and soul quenching dread. Because honestly, Twitter? Do you actually think 140 characters are able to contain the excitement of my word typing hands, the fire of my imagination and the fury with which I lay my barely literary responsible vengeance upon thee? \n\nWell, I guess, probably, but that's not the point. Either way, you can follow me on Twitter as [@SmokeyTheSalmon](https://twitter.com/SmokeyTheSalmon).\n"
+}

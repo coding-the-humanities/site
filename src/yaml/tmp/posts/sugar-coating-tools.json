@@ -1,0 +1,17 @@
+{
+  "title": "Sugar Coating Tools",
+  "posted": "2014-09-13T20:23:12.000Z",
+  "authors": [
+    "Marijn Koolen"
+  ],
+  "images": [
+    {
+      "url": "./images/sugar-coated-apple.jpg"
+    }
+  ],
+  "tags": [
+    "article",
+    "tools"
+  ],
+  "content": "Workshops aimed at training humanities scholars in the use of digital tools\nare often focused on easy-to-use tools with intuitive, user-friendly\ninterfaces. Some tools, such as [Prism](http://prism.scholarslab.org/) or the\n[Google Ngram Viewer](https://books.google.com/ngrams/), are very specific\nand relatively easy to understand. Others, like\n[Gephi](https://gephi.github.io/) and\n[Mallet](http://mallet.cs.umass.edu/index.php), are more generic and have\nextensive menus and lists of buttons or parameters and require weeks or even\nmonths of serious exploration to get to grips with. In these workshops, some\nsimple examples are given of how these tools can be used for humanities\nresearch.\n\n## Shying Away from Critical Thinking\nScholars make little progress in understanding how digital tools work under\nthe hood, and when asked if that's important often reply they don't want to\nknow about the details. After all, they're humanities scholars, not computer\nscientists or software developers. But is that a good enough reason? Would\nyou trust a librarian to read and summarise some scholarly publications for\nyou? \n\nThese tools call for a programmatic approach. By tinkering with the nuts and\nbolts of the system, and controlling which modules and plugins are used, or\nhow parameters are set, a user will get to understand what’s going on inside\na tool. Every step inside the tool that transforms the data conveys a\ndecision by the programmer about how to interpret the data. Remaining\nignorant of such decisions on purpose is shying away from our responsibility\nas scholars to understand the methods we use, why we use them, and what their\nconsequences are.\n\n## Code Is Language Too \nWhy are so many humanities researchers unwilling to adopt a programmatic\nperspective to the use of digital tools? Or why do so many workshop\norganisers think humanities scholars are not willing or able to learn to\nprogram and modify their own tools?\n\nProgramming doesn't have to be approached from a computer science\nperspective, which is focused almost purely on processes and abstractions.\nCoding has a strong relationship with humanities too. It is [conveyed through\nlanguage](http://codingthehumanities.com/essays/blurred-lines), makes use of\nmetaphors, involves composition and gives us the freedom to do things in many\ndifferent ways. Programming requires critical reflection on the possibilities\nand impossibilities of coding, and allows multiple perspectives on how\nsomething could or should be programmed.\n\n## Into the Nitty Gritty\nDigital Humanities needs workshops and tutorials that discuss the gritty\ndetails of tool building and use. Scholars and students can be shown not only\nthat programming is not too difficult to learn–especially if learned early in\nthe curriculum–but also that digital research without such knowledge is at\nodds with the critical thinking that is rightly praised within the\nhumanities. There are enough workshops that gently introduce digital tools\nwith lots of sugar coating. Let’s have more workshops that teach technical\njdetail and the skills to reflect on it critically.\n"
+}

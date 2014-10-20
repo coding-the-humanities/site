@@ -5,21 +5,59 @@ authors:
 images:
 - url: ./images/sugar-coated-apple.jpg
 tags: 
-- essay
+- article
 - tools
 content: |
-
-  Workshops aimed at training humanities scholars in the use of digital tools are often focused on easy-to-use tools with intuitive, user-friendly interfaces. Some tools, such as [Prism](http://prism.scholarslab.org/) or the [Google Ngram Viewer](https://books.google.com/ngrams/), are very specific and relatively easy to understand. Others, like [Gephi](https://gephi.github.io/) and [Mallet(http://mallet.cs.umass.edu/index.php), are more generic and have extensive menus and lists of buttons or parameters and require weeks or even months of serious exploration to get to grips with. In these workshops, some simple examples are given of how these tools can be used for humanities research.
+  Workshops aimed at training humanities scholars in the use of digital tools
+  are often focused on easy-to-use tools with intuitive, user-friendly
+  interfaces. Some tools, such as [Prism](http://prism.scholarslab.org/) or the
+  [Google Ngram Viewer](https://books.google.com/ngrams/), are very specific
+  and relatively easy to understand. Others, like
+  [Gephi](https://gephi.github.io/) and
+  [Mallet](http://mallet.cs.umass.edu/index.php), are more generic and have
+  extensive menus and lists of buttons or parameters and require weeks or even
+  months of serious exploration to get to grips with. In these workshops, some
+  simple examples are given of how these tools can be used for humanities
+  research.
 
   ## Shying Away from Critical Thinking
-  Scholars make little progress in understanding how digital tools work under the hood, and when asked if that's important often reply they don't want to know about the details. After all, they're humanities scholars, not computer scientists or software developers. But is that a good enough reason? Would you trust a librarian to read and summarise some scholarly publications for you? 
+  Scholars make little progress in understanding how digital tools work under
+  the hood, and when asked if that's important often reply they don't want to
+  know about the details. After all, they're humanities scholars, not computer
+  scientists or software developers. But is that a good enough reason? Would
+  you trust a librarian to read and summarise some scholarly publications for
+  you? 
 
-  These tools call for a programmatic approach. By tinkering with the nuts and bolts of the system, and controlling which modules and plugins are used, or how parameters are set, a user will get to understand what’s going on inside a tool. Every step inside the tool that transforms the data conveys a decision by the programmer about how to interpret the data. Remaining ignorant of such decisions on purpose is shying away from our responsibility as scholars to understand the methods we use, why we use them, and what their consequences are.
+  These tools call for a programmatic approach. By tinkering with the nuts and
+  bolts of the system, and controlling which modules and plugins are used, or
+  how parameters are set, a user will get to understand what’s going on inside
+  a tool. Every step inside the tool that transforms the data conveys a
+  decision by the programmer about how to interpret the data. Remaining
+  ignorant of such decisions on purpose is shying away from our responsibility
+  as scholars to understand the methods we use, why we use them, and what their
+  consequences are.
   
   ## Code Is Language Too 
-  Why are so many humanities researchers unwilling to adopt a programmatic perspective to the use of digital tools? Or why do so many workshop organisers think humanities scholars are not willing or able to learn to program and modify their own tools?
+  Why are so many humanities researchers unwilling to adopt a programmatic
+  perspective to the use of digital tools? Or why do so many workshop
+  organisers think humanities scholars are not willing or able to learn to
+  program and modify their own tools?
 
-  Programming doesn't have to be approached from a computer science perspective, which is focused almost purely on processes and abstractions. Coding has a strong relationship with humanities too. It is [conveyed through language](http://codingthehumanities.com/essays/blurred-lines), makes use of metaphors, involves composition and gives us the freedom to do things in many different ways. Programming requires critical reflection on the possibilities and impossibilities of coding, and allows multiple perspectives on how something could or should be programmed.
+  Programming doesn't have to be approached from a computer science
+  perspective, which is focused almost purely on processes and abstractions.
+  Coding has a strong relationship with humanities too. It is [conveyed through
+  language](http://codingthehumanities.com/essays/blurred-lines), makes use of
+  metaphors, involves composition and gives us the freedom to do things in many
+  different ways. Programming requires critical reflection on the possibilities
+  and impossibilities of coding, and allows multiple perspectives on how
+  something could or should be programmed.
 
   ## Into the Nitty Gritty
-  Digital Humanities needs workshops and tutorials that discuss the gritty details of tool building and use. Scholars and students can be shown not only that programming is not too difficult to learn–especially if learned early in the curriculum–but also that digital research without such knowledge is at odds with the critical thinking that is rightly praised within the humanities. There are enough workshops that gently introduce digital tools with lots of sugar coating. Let’s have more workshops that teach technical detail and the skills to reflect on it critically.
+  Digital Humanities needs workshops and tutorials that discuss the gritty
+  details of tool building and use. Scholars and students can be shown not only
+  that programming is not too difficult to learn–especially if learned early in
+  the curriculum–but also that digital research without such knowledge is at
+  odds with the critical thinking that is rightly praised within the
+  humanities. There are enough workshops that gently introduce digital tools
+  with lots of sugar coating. Let’s have more workshops that teach technical
+  jdetail and the skills to reflect on it critically.
