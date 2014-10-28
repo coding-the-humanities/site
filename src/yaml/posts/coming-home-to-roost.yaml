@@ -1,0 +1,41 @@
+---
+title: Coming Home to Roost 
+posted: 2014-09-15 21:57:27 
+authors: 
+- Taeke Keuning
+images:
+- url: ./images/chicks.jpg 
+tags:
+- post
+- roost
+- internship
+content: |
+
+  Chicago home of the Blues Brothers, Wrigley field, the Willis tower (formerly known as the Sears tower), the iconic L train, and apparently the best Italian beef sandwich. Though impressive, we were there for [Roost](http://roost.bocoup.com/) the JavaScript conference organised by [Bocoup](http://bocoup.com/). With 280 people from all over the world it was their biggest conference yet. 
+
+  The conference started on a Wednesday morning, with breakfast and a quick sign up. The Sheraton Ballroom started filling up with MacBooks and their geeky owners, once everybody found a place and successfully connected to the wifi the lights dimmed, Roost had begun.  
+
+
+  ## Heating up the Water 
+
+  After a quick welcome speech, [Ashley Williams](http://bocoup.com/weblog/author/ashley-williams/) was introduced to talk about architectural principles in building web-apps, the Model-view-controller and how that translates to the web. It introduced us to the concept of making your apps modular, maintainable and to keep the dependencies to a minimum. 
+
+  Next up was [Mike Pennisi](http://bocoup.com/weblog/author/mike-pennisi/), it was the start of the web-app that would be live-coded(more or less) during the conference. With a comic video the client stated his requirements, and Mike started to filter out what was needed to realise the app. It was going to be a sort of photo book app where people could take photo’s with their webcam or upload them directly.
+
+  Now it was up to [Ben Alman](http://bocoup.com/weblog/author/ben-alman/) the man behind [Grunt](http://gruntjs.com/) to set up the file structure and of course Grunt the automated task runner. His talk was a great insight in how to use Grunt the way it was meant to be, explaining features and showing us lots of tips and tricks.
+
+
+  ## Boiled or Poached? 
+
+  After we set up the development environment, the project was ready to actually start production. [Irene Ros](http://bocoup.com/weblog/author/irene-ros/) introduced us to [Backbone.js](http://backbonejs.org/), a lightweight library that assists with structuring a modern web-app. Backbone.js sits in the browser, between the server and the client side. Backbone.js translates the MVC model to the web using models, collections and views, in which this case the view is a sort of controller handling events that originate from the UI. Backbone.js is designed to keep the structure of your web-app modular therefore making it easier to replace a single element and not have to refactor everything. Backbone.js makes use of [Node.js](http://nodejs.org/) and templates. 
+
+
+  ## Styling the Plate
+  
+  From there on it was about finishing features and adding new functionalities. Day two was about styling and testing. After the recap Ben Alman showed us how to modularise CSS and how to handle all those nasty browser dependencies like -webkit- moz-. without repeating code using Stylus a framework for styling. It gives us the opportunity to use logic in our CSS and for example nesting. Ben showed us how to integrate and optimise this using Grunt.
+
+  Then there was the testing, a daunting and complex subject. Mike Pennisi took the time to explain what types of testing environments there are showing us the differences between Test-Driven development and Behaviour-Driven development, and introduced us to [Sinon.js](http://sinonjs.org/). This was definitely an important topic because a lot of people were talking about the need for a good testing environment and how they are slowly embracing the idea. These are the slides I definitely need to study a lot closer. 
+
+  ## The Future
+  The great thing about Roost is that they gave us an amazing summary of what can be done using these frameworks or libraries when they are combined. The future is definitely JavaScript.
+
