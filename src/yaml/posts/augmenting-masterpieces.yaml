@@ -1,0 +1,25 @@
+---
+title: Researching Augmenting Masterpieces
+posted: 2015-05-10 13:50:27 
+authors: 
+- Patty Jansen
+images:
+- url: 
+- url: ./images/augmentingmasterpieces1.jpg
+- url: ./images/augmentingmasterpieces2.jpg
+tags:
+- post
+content: |
+  Imagine yourself wandering through the Rijksmuseum, walking from room to room, viewing the artworks and historical objects. Have you ever asked yourself why the past is presented to you in this particular way? What kind of experience does the museum exhibition space give to you? [Augmenting Masterpieces](http://augmentingmasterpieces.nl) (2014), led by embedded researcher [Johanna Barnbeck](http://johannabarnbeck.wix.com/johannabarnbeck) (GER), raises the issue what visitors really want and sets out to map these needs, experiences and expectations of the museum visitor in order to design 'solutions'.
+
+  Through the photographic User Camera Studies, a research tool where the visitor is asked to walk around with a camera and photographs anything that draws his or her attention and later reflects on this, a prototype was developed for testing in the museum. The aim of the prototype was to make the visitor feel more engaged with the museum surroundings and to reduce the social awkward sphere most visitors seemed to encounter due to their lack of knowledge when paying a visit to the museum. Eventually, the outcomes of the testing had to provide a answer to the following question: “How we might engage museum visitors more with their surrounding without indicating a distinction by putting value into the aspect they choose to engage with?”.
+  
+  ## From Research to Interafaces and Beacons
+
+  Testing a prototype in an institution such as the Rijksmuseum is truly a privilege, demands proper preparation and brings the expected tension. Next to Johanna, the team was compiled out of [UNC INC](https://www.uncinc.nl/en), who developed the prototype application commissioned by Johanna, [Screenturner](http://screenturner.nl/) who caught everything on tape, [Robert-Jan Korteschiel](https://www.linkedin.com/pub/robert-jan-korteschiel/47/141/b62) (Coding the Humanities) and [me, Patty Jansen](https://www.linkedin.com/pub/patty-jansen/22/5b3/a11). The prototype concerned a tablet with a designed interface which responded to specifically designed beacons, placed in the two exhibition spaces which were given as a testing area by the Rijksmuseum to our research team. The placed beacons were centered around objects, not visible to the visitors eye, and contained special chips which send signals to the tablet. Whenever a visitor approached a beacon, the tablet received its signal.
+
+  The concept of a museum leads to a set of expectations of how the museum is set up. The prototype hacks this expectation; the visitor was not aware where and when this signal would be received by the tablet, which added an unexpected notion to the experience. Instead of only looking, the visitor discovers. The signal received by the tablet was comprised out of a few options; for example, a multiple-choice question concerning the object. a sound-fragment spoken by another visitor and the possibility of adding a story. The sort questions asked were not of a highbrow art level but more general questions. The spoken stories were personal stories. Here, tone and pronunciation also differ from museum narrated audio devices; they sound less perfect, less static. You could say, it takes the edge of the high-bred presentations and design of the museum and broadens the collection to the outside world – the real world and the digital world.
+
+  ## Adding a Social Layer to Art 
+
+  Overall feedback from the testing visitors were positive, stating that they would use such an application during their visit, if available. They enjoyed the trivia questions, stories of other visitors and the possibility to participate. Through these features, this application adds an socially augmented layer to the visitors experience of the exhibition. In such a way, the app is an ever developing production which does not constrict the content of a museum to its physical viewing and has the potentiality to develop visitors social awkwardness into a pleasant social experience. We can only hope this prototype will have loads of opportunity being further developed in the nearby future!
